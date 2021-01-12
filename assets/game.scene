@@ -11,7 +11,7 @@
   },
   {
     "__type__": "cc.Scene",
-    "_name": "",
+    "_name": "Scene",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -25,7 +25,7 @@
         "__id__": 7
       },
       {
-        "__id__": 75
+        "__id__": 77
       },
       {
         "__id__": 66
@@ -2177,28 +2177,26 @@
     "__type__": "cc.Node",
     "_name": "Score",
     "_objFlags": 0,
-    "_parent": {
-      "__id__": 75
-    },
+    "_parent": null,
     "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 79
+        "__id__": 75
       },
       {
         "__id__": 73
       },
       {
-        "__id__": 80
+        "__id__": 76
       }
     ],
     "_prefab": null,
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 356.03,
-      "y": 781.462,
-      "z": 0
+      "x": 896.03,
+      "y": 1741.462,
+      "z": 1
     },
     "_lrot": {
       "__type__": "cc.Quat",
@@ -2223,27 +2221,74 @@
     "_id": "0bCqnDFpdOSZZ65e+EFG8L"
   },
   {
+    "__type__": "cc.UITransform",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 74
+    },
+    "_enabled": true,
+    "_priority": 0,
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 199.14,
+      "height": 75.6
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_id": "07pd/e1RJNB7d/VqEhWy69"
+  },
+  {
+    "__type__": "cc.Widget",
+    "_name": "Label<Widget>",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 74
+    },
+    "_enabled": true,
+    "_alignFlags": 33,
+    "_target": {
+      "__id__": 77
+    },
+    "_left": 0,
+    "_right": 84.40000000000003,
+    "_top": 140.73800000000006,
+    "_bottom": 0,
+    "_horizontalCenter": 0,
+    "_verticalCenter": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
+    "_originalWidth": 0,
+    "_originalHeight": 0,
+    "_alignMode": 2,
+    "_lockFlags": 33,
+    "_id": "ebcXiEA/JOerEyh5mtS0BJ"
+  },
+  {
     "__type__": "cc.Node",
     "_name": "Canvas",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
     },
-    "_children": [
-      {
-        "__id__": 74
-      }
-    ],
+    "_children": [],
     "_active": true,
     "_components": [
       {
-        "__id__": 76
-      },
-      {
-        "__id__": 77
-      },
-      {
         "__id__": 78
+      },
+      {
+        "__id__": 79
+      },
+      {
+        "__id__": 80
       }
     ],
     "_prefab": null,
@@ -2280,7 +2325,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 75
+      "__id__": 77
     },
     "_enabled": true,
     "_priority": 0,
@@ -2301,7 +2346,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 75
+      "__id__": 77
     },
     "_enabled": true,
     "_priority": 0,
@@ -2322,7 +2367,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 75
+      "__id__": 77
     },
     "_enabled": true,
     "_alignFlags": 4,
@@ -2344,57 +2389,6 @@
     "_alignMode": 2,
     "_lockFlags": 36,
     "_id": "1bNB+oBEJP2q8Nw62kmTMn"
-  },
-  {
-    "__type__": "cc.UITransform",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 74
-    },
-    "_enabled": true,
-    "_priority": 0,
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 199.14,
-      "height": 75.6
-    },
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_id": "07pd/e1RJNB7d/VqEhWy69"
-  },
-  {
-    "__type__": "cc.Widget",
-    "_name": "Label<Widget>",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 74
-    },
-    "_enabled": true,
-    "_alignFlags": 33,
-    "_target": {
-      "__id__": 75
-    },
-    "_left": 0,
-    "_right": 84.40000000000003,
-    "_top": 140.73800000000006,
-    "_bottom": 0,
-    "_horizontalCenter": 0,
-    "_verticalCenter": 0,
-    "_isAbsLeft": true,
-    "_isAbsRight": true,
-    "_isAbsTop": true,
-    "_isAbsBottom": true,
-    "_isAbsHorizontalCenter": true,
-    "_isAbsVerticalCenter": true,
-    "_originalWidth": 0,
-    "_originalHeight": 0,
-    "_alignMode": 2,
-    "_lockFlags": 33,
-    "_id": "ebcXiEA/JOerEyh5mtS0BJ"
   },
   {
     "__type__": "cc.SceneGlobals",
