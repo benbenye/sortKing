@@ -47,7 +47,7 @@
     "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
-      "x": 90,
+      "x": 89.99999999999999,
       "y": 0,
       "z": 0
     },
@@ -109,7 +109,7 @@
     "startLifetime": {
       "__id__": 12
     },
-    "duration": 3,
+    "duration": 0.7,
     "loop": false,
     "simulationSpeed": 1,
     "playOnAwake": true,
@@ -155,7 +155,7 @@
     },
     "enableCulling": false,
     "_prewarm": false,
-    "_capacity": 20,
+    "_capacity": 15,
     "_simulationSpace": 1,
     "_id": ""
   },
@@ -173,7 +173,7 @@
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
-    "constant": 1,
+    "constant": 0.8,
     "multiplier": 1
   },
   {
@@ -191,7 +191,7 @@
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
-    "constant": 6,
+    "constant": 5,
     "multiplier": 1
   },
   {
@@ -221,7 +221,7 @@
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
-    "constant": 3,
+    "constant": 0.3,
     "multiplier": 1
   },
   {
@@ -233,7 +233,7 @@
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
-    "constant": 20,
+    "constant": 15,
     "multiplier": 1
   },
   {
@@ -277,7 +277,7 @@
     "arcSpeed": {
       "__id__": 19
     },
-    "length": 2,
+    "length": 0.01,
     "boxThickness": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -308,7 +308,7 @@
   {
     "__type__": "cc.CurveRange",
     "mode": 0,
-    "constant": 1,
+    "constant": 0,
     "multiplier": 1
   },
   {

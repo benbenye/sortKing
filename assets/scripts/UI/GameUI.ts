@@ -1,6 +1,7 @@
 import { _decorator, Component, Node, UIFlow, LabelComponent } from 'cc';
 import { Constants } from '../data/Constants';
 import { RunTimeData } from '../data/GameData';
+import { CustomEventListener } from '../utils/CustomEventListener';
 import { UIManager } from './UIManager';
 const { ccclass, property } = _decorator;
 
@@ -14,11 +15,15 @@ export class GameUI extends Component {
         console.log(this._runTimeData)
         this.countDown = this.node.getChildByName('topBar').getChildByName('Level-countdown').getComponent(LabelComponent);
         this.countDown.string = `${this.formatTime()}`
+        CustomEventListener.dispatchEvent(Constants.GameState.PLAYING)
     }
 
     update(dt) {
         this._runTimeData.time -= dt;
         this.countDown.string = `${this.formatTime()}`
+        if (this._runTimeData.time <= 0) {
+            CustomEventListener.dispatchEvent(Constants.GameState.OVER)
+        }
     }
 
     formatTime() {

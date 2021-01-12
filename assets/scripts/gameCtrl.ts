@@ -5,28 +5,6 @@ import { UIManager } from './UI/UIManager';
 import { CustomEventListener } from './utils/CustomEventListener';
 const { ccclass, property } = _decorator;
 
-enum STATE {
-    IDLE = 1,
-    START,
-    MOVE,
-    ON_COLLISION,
-    DROP
-}
-
-enum GameState {
-    INIT = 1,
-    PLAYING,
-    OVER
-}
-
-enum modelGroup {
-    SECONDARY = 1 << 0,
-    OTHER_MODEL = 1 << 1
-}
-
-enum mask {
-    FOR_NONE = 0
-}
 @ccclass('GameCtrl')
 export class GameCtrl extends Component {
     private Sphere: Node = null;
@@ -44,12 +22,13 @@ export class GameCtrl extends Component {
     private camera: Camera = null;
     @property(Prefab)
     private gas: Prefab = null;
-    private state: number = STATE.IDLE;
+    private touchState: number = Constants.TouchState.IDLE;
     private screenPos = null;
     private targetModel: Node = null;
     private targetModelTween: Tween = null;
     private _gas = null;
     private _runTimeData: RunTimeData = null;
+    private gameState = Constants.GameState.INIT;
     
     start () {
         this.Sphere = this.node.getChildByName('Sphere');
@@ -60,7 +39,7 @@ export class GameCtrl extends Component {
         this.Cylinder = this.node.getChildByName('Cylinder');
         this.SecondaryPlane = this.node.getChildByName('SecondaryPlane'); // 辅助器，用于移动3d目标检测碰撞使用
         this.SecondaryPlane.active = false;
-        this.state = STATE.IDLE;
+        this.touchState = Constants.TouchState.IDLE;
         // this.Sphere.setWorldPosition(new Vec3(0, 2, 8.522))
         this.gameStart();
         systemEvent.on(SystemEvent.EventType.TOUCH_START, this.onTouchStart, this);
@@ -68,9 +47,12 @@ export class GameCtrl extends Component {
         systemEvent.on(SystemEvent.EventType.TOUCH_END, this.onTouchEnd, this);
         systemEvent.on(SystemEvent.EventType.TOUCH_CANCEL, this.onTouchCancel, this);
         CustomEventListener.on(Constants.EventName.GAME_START, this.gameStart, this)
+        CustomEventListener.on(Constants.GameState.PLAYING, this.play, this);
+        CustomEventListener.on(Constants.GameState.OVER, this.gameOver, this);
     }
 
     update() {
+        if (this.gameState === Constants.GameState.OVER) return;
         if (this._runTimeData.time <= 0) {
             this.gameFail();
             return;
@@ -125,8 +107,8 @@ export class GameCtrl extends Component {
     }
 
     private takeInTheHole() {
-        if (!this.targetModel || this.state === STATE.ON_COLLISION) return;
-        this.state = STATE.ON_COLLISION;
+        if (!this.targetModel || this.touchState === Constants.TouchState.ON_COLLISION) return;
+        this.touchState = Constants.TouchState.ON_COLLISION;
         console.log('take')
         tween(this.targetModel).to(0.3, {
             worldPosition: new Vec3(0, 1, 8.225),
@@ -136,18 +118,17 @@ export class GameCtrl extends Component {
         }).start();
         this.SecondaryPlane.setWorldPosition(new Vec3(0, 0, 0));
         this.SecondaryPlane.active = false;
+        this.showGas();
         this.scheduleOnce(() => {
             systemEvent.emit(SystemEvent.EventType.TOUCH_CANCEL)
             this.targetModel.active = false;
             // this.node.removeChild(this.targetModel);
-            this.showGas();
             this.screenPos = null;
             this.targetModel = null;
             this._runTimeData.currProgress += 1;
             this.Score.string = `收集：${this._runTimeData.currProgress}`;
             if (this._runTimeData.currProgress >= 3) {
-                // this.gameSuccess();
-                this.gameFail();
+                this.gameSuccess();
             }
         }, 1)
 
@@ -164,9 +145,9 @@ export class GameCtrl extends Component {
     }
 
     private onTouchStart(e) {
-        console.log(this.state)
-        if (this.state !== STATE.IDLE) return;
-        this.state = STATE.START;
+        console.log(this.touchState)
+        if (this.touchState !== Constants.TouchState.IDLE) return;
+        this.touchState = Constants.TouchState.START;
         this.screenPos = e.getLocation();
         this.lookAtTarget()
         if (this.targetModel)
@@ -176,8 +157,8 @@ export class GameCtrl extends Component {
             .start();
     }
     private onTouchMove(e) {
-        if (this.state !== STATE.START && this.state !== STATE.MOVE) return;
-        this.state = STATE.MOVE;
+        if (this.touchState !== Constants.TouchState.START && this.touchState !== Constants.TouchState.MOVE) return;
+        this.touchState = Constants.TouchState.MOVE;
         this.screenPos = e.getLocation();
         if (!this.SecondaryPlane.active)
             this.SecondaryPlane.active = true;
@@ -185,20 +166,20 @@ export class GameCtrl extends Component {
         this.distanceHole();
     }
     private onTouchEnd() {
-        if(this.state !== STATE.MOVE) return;
+        if(this.touchState !== Constants.TouchState.MOVE) return;
 
-        this.state = STATE.DROP;
+        this.touchState = Constants.TouchState.DROP;
         this.screenPos = null;
         this.targetModel = null;
         this.SecondaryPlane.setWorldPosition(new Vec3(0, 0, 0));
         this.SecondaryPlane.active = false;
         this.scheduleOnce(() => {
-            this.state = STATE.IDLE;
+            this.touchState = Constants.TouchState.IDLE;
             this.clearTween();
         }, 1)
     }
     private onTouchCancel() {
-        this.state = STATE.IDLE;
+        this.touchState = Constants.TouchState.IDLE;
             this.clearTween();
     }
 
@@ -212,7 +193,7 @@ export class GameCtrl extends Component {
         this._runTimeData = RunTimeData.instance();
         this._runTimeData.maxProgress = 5;
         this._runTimeData.currProgress = 0;
-        this._runTimeData.time = 3;
+        this._runTimeData.time = 8;
         this._runTimeData.isTakeInHoleOver = true;
     }
 
@@ -223,6 +204,8 @@ export class GameCtrl extends Component {
         this.Torus.active = true;
         this.Cone.active = true;
         this.Cylinder.active = true;
+        this.gameState = Constants.GameState.INIT;
+        this.touchState = Constants.TouchState.IDLE;
     }
 
     public gameStart() {
@@ -230,14 +213,29 @@ export class GameCtrl extends Component {
         this.initMap();
         UIManager.showUI(Constants.UI.MAIN_UI);
         UIManager.hideUI(Constants.UI.GAME_OVER_UI);
+        UIManager.hideUI(Constants.UI.GAME_UI);
+    }
+
+    private play() {
+        this.gameState = Constants.GameState.PLAYING;
     }
     
     private gameSuccess() {
+        this.gameState = Constants.GameState.OVER;
         UIManager.showUI(Constants.UI.GAME_OVER_UI, () => {}, {status: true});
         UIManager.hideUI(Constants.UI.GAME_UI);
     }
     private gameFail() {
+        this.gameState = Constants.GameState.OVER;
         UIManager.showUI(Constants.UI.GAME_OVER_UI, () => {}, {status: false});
         UIManager.hideUI(Constants.UI.GAME_UI);
+    }
+
+    private gameOver() {
+        if (this._runTimeData.currProgress >= 3) {
+            this.gameSuccess();
+            return;
+        }
+        this.gameFail();
     }
 }
