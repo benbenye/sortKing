@@ -1,4 +1,8 @@
 import { _decorator, Component, Node, systemEvent, SystemEvent, Camera, find, Vec3, PhysicsSystem, TERRAIN_HEIGHT_BASE, CanvasComponent, ColliderComponent, BoxColliderComponent, Label, tween, Tween, ParticleSystemComponent, Prefab, instantiate, ParticleUtils, ParticleSystem } from 'cc';
+import { Constants } from './data/Constants';
+import { RunTimeData } from './data/GameData';
+import { UIManager } from './UI/UIManager';
+import { CustomEventListener } from './utils/CustomEventListener';
 const { ccclass, property } = _decorator;
 
 enum STATE {
@@ -8,6 +12,13 @@ enum STATE {
     ON_COLLISION,
     DROP
 }
+
+enum GameState {
+    INIT = 1,
+    PLAYING,
+    OVER
+}
+
 enum modelGroup {
     SECONDARY = 1 << 0,
     OTHER_MODEL = 1 << 1
@@ -36,9 +47,9 @@ export class GameCtrl extends Component {
     private state: number = STATE.IDLE;
     private screenPos = null;
     private targetModel: Node = null;
-    private scoreCount: number = 0;
     private targetModelTween: Tween = null;
     private _gas = null;
+    private _runTimeData: RunTimeData = null;
     
     start () {
         this.Sphere = this.node.getChildByName('Sphere');
@@ -51,10 +62,19 @@ export class GameCtrl extends Component {
         this.SecondaryPlane.active = false;
         this.state = STATE.IDLE;
         // this.Sphere.setWorldPosition(new Vec3(0, 2, 8.522))
+        this.gameStart();
         systemEvent.on(SystemEvent.EventType.TOUCH_START, this.onTouchStart, this);
         systemEvent.on(SystemEvent.EventType.TOUCH_MOVE, this.onTouchMove, this);
         systemEvent.on(SystemEvent.EventType.TOUCH_END, this.onTouchEnd, this);
         systemEvent.on(SystemEvent.EventType.TOUCH_CANCEL, this.onTouchCancel, this);
+        CustomEventListener.on(Constants.EventName.GAME_START, this.gameStart, this)
+    }
+
+    update() {
+        if (this._runTimeData.time <= 0) {
+            this.gameFail();
+            return;
+        }
     }
 
     private lookAtTarget() {
@@ -118,12 +138,17 @@ export class GameCtrl extends Component {
         this.SecondaryPlane.active = false;
         this.scheduleOnce(() => {
             systemEvent.emit(SystemEvent.EventType.TOUCH_CANCEL)
-            this.node.removeChild(this.targetModel);
+            this.targetModel.active = false;
+            // this.node.removeChild(this.targetModel);
             this.showGas();
             this.screenPos = null;
             this.targetModel = null;
-            this.scoreCount += 1;
-            this.Score.string = `收集：${this.scoreCount}`;
+            this._runTimeData.currProgress += 1;
+            this.Score.string = `收集：${this._runTimeData.currProgress}`;
+            if (this._runTimeData.currProgress >= 3) {
+                // this.gameSuccess();
+                this.gameFail();
+            }
         }, 1)
 
     }
@@ -181,5 +206,38 @@ export class GameCtrl extends Component {
         if(this.targetModelTween)
             this.targetModelTween.stop();
             this.targetModelTween = null;
+    }
+
+    private initGameData() {
+        this._runTimeData = RunTimeData.instance();
+        this._runTimeData.maxProgress = 5;
+        this._runTimeData.currProgress = 0;
+        this._runTimeData.time = 3;
+        this._runTimeData.isTakeInHoleOver = true;
+    }
+
+    private initMap() {
+        this.Sphere.active = true;
+        this.Cube.active = true;
+        this.Capsule.active = true;
+        this.Torus.active = true;
+        this.Cone.active = true;
+        this.Cylinder.active = true;
+    }
+
+    public gameStart() {
+        this.initGameData();
+        this.initMap();
+        UIManager.showUI(Constants.UI.MAIN_UI);
+        UIManager.hideUI(Constants.UI.GAME_OVER_UI);
+    }
+    
+    private gameSuccess() {
+        UIManager.showUI(Constants.UI.GAME_OVER_UI, () => {}, {status: true});
+        UIManager.hideUI(Constants.UI.GAME_UI);
+    }
+    private gameFail() {
+        UIManager.showUI(Constants.UI.GAME_OVER_UI, () => {}, {status: false});
+        UIManager.hideUI(Constants.UI.GAME_UI);
     }
 }

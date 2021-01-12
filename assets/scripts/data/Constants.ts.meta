@@ -2,7 +2,7 @@
   "ver": "4.0.1",
   "importer": "typescript",
   "imported": true,
-  "uuid": "1ca3876c-a3bc-4969-b9f1-ed5d80690a73",
+  "uuid": "2e76cb14-89e5-4587-9c66-33fd27ddc5bf",
   "files": [
     ".js",
     ".trans"
@@ -10,7 +10,7 @@
   "subMetas": {},
   "userData": {
     "importAsPlugin": false,
-    "moduleId": "project:///assets/scripts/GameCtrl.js",
+    "moduleId": "project:///assets/scripts/data/Constants.js",
     "importerSettings": 0
   }
 }

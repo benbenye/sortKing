@@ -2,7 +2,7 @@
   "ver": "4.0.1",
   "importer": "typescript",
   "imported": true,
-  "uuid": "1ca3876c-a3bc-4969-b9f1-ed5d80690a73",
+  "uuid": "8344028a-89c9-4e08-897f-691540edaa9f",
   "files": [
     ".js",
     ".trans"
@@ -10,7 +10,7 @@
   "subMetas": {},
   "userData": {
     "importAsPlugin": false,
-    "moduleId": "project:///assets/scripts/GameCtrl.js",
+    "moduleId": "project:///assets/scripts/UI/GameOverUI.js",
     "importerSettings": 0
   }
 }
