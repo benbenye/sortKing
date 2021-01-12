@@ -125,6 +125,7 @@ export class GameCtrl extends Component {
             // this.node.removeChild(this.targetModel);
             this.screenPos = null;
             this.targetModel = null;
+            if (this.gameState === Constants.GameState.OVER) return;
             this._runTimeData.currProgress += 1;
             this.Score.string = `收集：${this._runTimeData.currProgress}`;
             if (this._runTimeData.currProgress >= 3) {
@@ -157,6 +158,10 @@ export class GameCtrl extends Component {
             .start();
     }
     private onTouchMove(e) {
+        if (this.gameState === Constants.GameState.OVER) {
+            systemEvent.emit(SystemEvent.EventType.TOUCH_CANCEL);
+            return;
+        }
         if (this.touchState !== Constants.TouchState.START && this.touchState !== Constants.TouchState.MOVE) return;
         this.touchState = Constants.TouchState.MOVE;
         this.screenPos = e.getLocation();
@@ -166,6 +171,10 @@ export class GameCtrl extends Component {
         this.distanceHole();
     }
     private onTouchEnd() {
+        if (this.gameState === Constants.GameState.OVER) {
+            systemEvent.emit(SystemEvent.EventType.TOUCH_CANCEL);
+            return;
+        }
         if(this.touchState !== Constants.TouchState.MOVE) return;
 
         this.touchState = Constants.TouchState.DROP;
@@ -221,17 +230,16 @@ export class GameCtrl extends Component {
     }
     
     private gameSuccess() {
-        this.gameState = Constants.GameState.OVER;
         UIManager.showUI(Constants.UI.GAME_OVER_UI, () => {}, {status: true});
         UIManager.hideUI(Constants.UI.GAME_UI);
     }
     private gameFail() {
-        this.gameState = Constants.GameState.OVER;
         UIManager.showUI(Constants.UI.GAME_OVER_UI, () => {}, {status: false});
         UIManager.hideUI(Constants.UI.GAME_UI);
     }
 
     private gameOver() {
+        this.gameState = Constants.GameState.OVER;
         if (this._runTimeData.currProgress >= 3) {
             this.gameSuccess();
             return;
