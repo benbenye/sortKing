@@ -1875,6 +1875,9 @@
     "camera": {
       "__id__": 6
     },
+    "gas": {
+      "__uuid__": "97f7a453-6a2d-4338-a38d-13d423508fe8"
+    },
     "_id": "ecW82VkZFHELmbe7mdCY2Y"
   },
   {
@@ -1888,10 +1891,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 70
-      },
-      {
-        "__id__": 72
+        "__id__": 71
       }
     ],
     "_prefab": null,
@@ -1936,6 +1936,9 @@
       },
       {
         "__id__": 65
+      },
+      {
+        "__id__": 70
       }
     ],
     "_active": true,
@@ -2054,6 +2057,45 @@
     "_lightmapSize": 64
   },
   {
+    "__type__": "cc.Node",
+    "_name": "effect",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 66
+    },
+    "_children": [],
+    "_active": true,
+    "_components": [],
+    "_prefab": null,
+    "_lpos": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_lrot": {
+      "__type__": "cc.Quat",
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "w": 1
+    },
+    "_lscale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_layer": 1073741824,
+    "_euler": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_id": "3fa4EM82lDB4WcAQ1IDHT1"
+  },
+  {
     "__type__": "cc.MeshRenderer",
     "_name": "Torus<ModelComponent>",
     "_objFlags": 0,
@@ -2068,7 +2110,7 @@
     ],
     "_visFlags": 0,
     "lightmapSettings": {
-      "__id__": 71
+      "__id__": 72
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@40ece"
@@ -2093,30 +2135,6 @@
     "_receiveShadow": false,
     "_recieveShadow": false,
     "_lightmapSize": 64
-  },
-  {
-    "__type__": "cc.BoxCollider",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 65
-    },
-    "_enabled": true,
-    "_material": null,
-    "_isTrigger": false,
-    "_center": {
-      "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 0,
-      "z": 0
-    },
-    "_size": {
-      "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 0.19999998807907104,
-      "z": 1
-    },
-    "_id": "35KgMfL8ZM0ogH7WTASNXd"
   },
   {
     "__type__": "cc.Label",

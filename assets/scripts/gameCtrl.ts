@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, systemEvent, SystemEvent, Camera, find, Vec3, PhysicsSystem, TERRAIN_HEIGHT_BASE, CanvasComponent, ColliderComponent, BoxColliderComponent, Label } from 'cc';
+import { _decorator, Component, Node, systemEvent, SystemEvent, Camera, find, Vec3, PhysicsSystem, TERRAIN_HEIGHT_BASE, CanvasComponent, ColliderComponent, BoxColliderComponent, Label, tween, Tween, ParticleSystemComponent, Prefab, instantiate, ParticleUtils, ParticleSystem } from 'cc';
 const { ccclass, property } = _decorator;
 
 enum STATE {
@@ -31,11 +31,14 @@ export class GameCtrl extends Component {
     private Score:Label = null;
     @property(Camera)
     private camera: Camera = null;
+    @property(Prefab)
+    private gas: Prefab = null;
     private state: number = STATE.IDLE;
     private screenPos = null;
     private targetModel: Node = null;
-    private HoleCollider: BoxColliderComponent = null;
     private scoreCount: number = 0;
+    private targetModelTween: Tween = null;
+    private _gas = null;
     
     start () {
         this.Sphere = this.node.getChildByName('Sphere');
@@ -44,12 +47,10 @@ export class GameCtrl extends Component {
         this.Torus = this.node.getChildByName('Torus');
         this.Cone = this.node.getChildByName('Cone');
         this.Cylinder = this.node.getChildByName('Cylinder');
-        this.HoleCollider = this.Hole.getComponent(BoxColliderComponent);
         this.SecondaryPlane = this.node.getChildByName('SecondaryPlane'); // 辅助器，用于移动3d目标检测碰撞使用
         this.SecondaryPlane.active = false;
         this.state = STATE.IDLE;
         // this.Sphere.setWorldPosition(new Vec3(0, 2, 8.522))
-        this.HoleCollider.on('onCollisionEnter', this.onCollision, this)
         systemEvent.on(SystemEvent.EventType.TOUCH_START, this.onTouchStart, this);
         systemEvent.on(SystemEvent.EventType.TOUCH_MOVE, this.onTouchMove, this);
         systemEvent.on(SystemEvent.EventType.TOUCH_END, this.onTouchEnd, this);
@@ -79,8 +80,8 @@ export class GameCtrl extends Component {
             }
             this[nodeName].setWorldPosition(hitPoint);
             this.targetModel = this[nodeName];
-            return;
-    }
+        }
+
         // 为什么在移动过程中，节点会越来越近？
         // A: 因为每次的hitpoint都是3d模型的顶部，如果不对Y进行保持，那么Y会越来越靠近人眼
 
@@ -95,24 +96,46 @@ export class GameCtrl extends Component {
         */
     }
 
+    private distanceHole() {
+        if (!this.targetModel) return;
+        const distance = Vec3.distance(this.targetModel.worldPosition, this.Hole.worldPosition)
+        if(distance < 3.5) {
+            this.takeInTheHole();
+        }
+    }
 
-    private onCollision() {
+    private takeInTheHole() {
         if (!this.targetModel || this.state === STATE.ON_COLLISION) return;
         this.state = STATE.ON_COLLISION;
-        console.log('on')
-        this.targetModel.setWorldPosition(new Vec3(0, 2, 8.225));
-        this.targetModel.lookAt(new Vec3(0, 5, 8.225));
+        console.log('take')
+        tween(this.targetModel).to(0.3, {
+            worldPosition: new Vec3(0, 1, 8.225),
+            eulerAngles: new Vec3(0, 0, 0)
+        }).call(() => {
+            // this.targetModel.lookAt(new Vec3(0, 5, 8.225));
+        }).start();
         this.SecondaryPlane.setWorldPosition(new Vec3(0, 0, 0));
         this.SecondaryPlane.active = false;
         this.scheduleOnce(() => {
             systemEvent.emit(SystemEvent.EventType.TOUCH_CANCEL)
             this.node.removeChild(this.targetModel);
+            this.showGas();
             this.screenPos = null;
             this.targetModel = null;
             this.scoreCount += 1;
             this.Score.string = `收集：${this.scoreCount}`;
-        }, 2)
+        }, 1)
 
+    }
+
+    private showGas() {
+        if(!this._gas){
+            const gas = instantiate(this.gas) as Node;
+            gas.setParent(this.Hole);
+            this._gas = gas.getComponent(ParticleSystem);
+        }
+
+        this._gas!.play();
     }
 
     private onTouchStart(e) {
@@ -121,6 +144,11 @@ export class GameCtrl extends Component {
         this.state = STATE.START;
         this.screenPos = e.getLocation();
         this.lookAtTarget()
+        if (this.targetModel)
+            this.targetModelTween = tween(this.targetModel)
+            .by(0.5, { eulerAngles: new Vec3(0, 10, 0) })
+            .repeatForever()
+            .start();
     }
     private onTouchMove(e) {
         if (this.state !== STATE.START && this.state !== STATE.MOVE) return;
@@ -129,6 +157,7 @@ export class GameCtrl extends Component {
         if (!this.SecondaryPlane.active)
             this.SecondaryPlane.active = true;
         this.lookAtTarget();
+        this.distanceHole();
     }
     private onTouchEnd() {
         if(this.state !== STATE.MOVE) return;
@@ -140,9 +169,17 @@ export class GameCtrl extends Component {
         this.SecondaryPlane.active = false;
         this.scheduleOnce(() => {
             this.state = STATE.IDLE;
+            this.clearTween();
         }, 1)
     }
     private onTouchCancel() {
         this.state = STATE.IDLE;
+            this.clearTween();
+    }
+
+    private clearTween() {
+        if(this.targetModelTween)
+            this.targetModelTween.stop();
+            this.targetModelTween = null;
     }
 }
