@@ -66,6 +66,8 @@ export class GameCtrl extends Component {
             let nodeName = PhysicsSystem.instance.raycastClosestResult.collider.node.name
             console.log(nodeName)
             if (nodeName.match('Wall')) {
+                if (this.targetModel) nodeName = this.targetModel.name;
+                else
                 systemEvent.emit(SystemEvent.EventType.TOUCH_CANCEL)
                 return;
             }
@@ -83,7 +85,8 @@ export class GameCtrl extends Component {
                 return;
             }
             this[nodeName].setWorldPosition(hitPoint);
-            this.targetModel = this[nodeName];
+            if (nodeName !== 'SecondaryPlane')
+                this.targetModel = this[nodeName];
         }
 
         // 为什么在移动过程中，节点会越来越近？

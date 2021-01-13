@@ -19,6 +19,8 @@ export class GameUI extends Component {
         this.countDown.string = `${Timer.formatTime(this._runTimeData.time)}`
         this.progressBar = this.node.getChildByName('topBar').getChildByName('ProgressBar').getComponent(ProgressBarComponent);
         this.progressBar.progress = 0;
+        this.node.getChildByName('topBar').getChildByName('Level-num').getComponent(LabelComponent).string = `LEVEL ${this._runTimeData.level}`;
+        this.node.getChildByName('name').getChildByName('Level-name').getComponent(LabelComponent).string = this._runTimeData.targetName;
         CustomEventListener.dispatchEvent(Constants.GameState.PLAYING)
         CustomEventListener.on(Constants.EventName.UPDATE_PROGRESS, this.updateProgress, this)
     }
