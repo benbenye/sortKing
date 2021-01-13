@@ -35,6 +35,6 @@ export class GameOverUI extends Component {
         CustomEventListener.dispatchEvent(Constants.EventName.GAME_START)
     }
     public next() {
-        CustomEventListener.dispatchEvent(Constants.EventName.GAME_START)
+        CustomEventListener.dispatchEvent(Constants.EventName.GAME_NEXT_START)
     }
 }

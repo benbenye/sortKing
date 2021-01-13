@@ -9,14 +9,16 @@ enum UI {
 }
 
 enum EventName {
-    GAME_START = 'game_start'
+    GAME_START = 'game_start',
+    GAME_NEXT_START = 'game_next_start',
+    UPDATE_PROGRESS = 'update_progress'
 }
 
 enum TouchState {
     IDLE = 1,
     START,
     MOVE,
-    ON_COLLISION,
+    IN_THE_HOLE,
     DROP
 }
 

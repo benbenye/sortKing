@@ -1,7 +1,8 @@
-import { _decorator, Component, Node, UIFlow, LabelComponent } from 'cc';
+import { _decorator, Component, Node, UIFlow, LabelComponent, ProgressBarComponent } from 'cc';
 import { Constants } from '../data/Constants';
 import { RunTimeData } from '../data/GameData';
 import { CustomEventListener } from '../utils/CustomEventListener';
+import { Timer } from '../utils/Timer';
 import { UIManager } from './UIManager';
 const { ccclass, property } = _decorator;
 
@@ -9,32 +10,29 @@ const { ccclass, property } = _decorator;
 export class GameUI extends Component {
     private _runTimeData: RunTimeData = null;
     private countDown: LabelComponent = null;
+    private progressBar: ProgressBarComponent = null;
 
     public show() {
         this._runTimeData = RunTimeData.instance();
         console.log(this._runTimeData)
         this.countDown = this.node.getChildByName('topBar').getChildByName('Level-countdown').getComponent(LabelComponent);
-        this.countDown.string = `${this.formatTime()}`
+        this.countDown.string = `${Timer.formatTime(this._runTimeData.time)}`
+        this.progressBar = this.node.getChildByName('topBar').getChildByName('ProgressBar').getComponent(ProgressBarComponent);
+        this.progressBar.progress = 0;
         CustomEventListener.dispatchEvent(Constants.GameState.PLAYING)
+        CustomEventListener.on(Constants.EventName.UPDATE_PROGRESS, this.updateProgress, this)
     }
 
     update(dt) {
         this._runTimeData.time -= dt;
-        this.countDown.string = `${this.formatTime()}`
+        this.countDown.string = `${Timer.formatTime(this._runTimeData.time)}`
         if (this._runTimeData.time <= 0) {
             CustomEventListener.dispatchEvent(Constants.GameState.OVER)
         }
     }
 
-    formatTime() {
-        let min = `${Math.floor(this._runTimeData.time / 60)}`;
-        let second = `${Math.floor(this._runTimeData.time % 60)}`;
-
-        if (+min <= -1 || +second <= -1) return `00:00`;
-
-        +min < 10 && (min = `0${min}`);
-        +second < 10 && (second = `0${second}`);
-
-        return `${min}:${second}`
+    private updateProgress() {
+        const rate = this._runTimeData.currProgress / this._runTimeData.maxProgress;
+        this.progressBar.progress = rate;
     }
 }

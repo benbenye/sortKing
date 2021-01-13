@@ -16,5 +16,6 @@ export class RunTimeData {
     public currProgress = 0;
     public maxProgress = 0;
     public time = 150; // 秒
+    public targetName = '';
     public isTakeInHoleOver = true;
 }

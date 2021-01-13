@@ -1,23 +1,18 @@
-import { _decorator, Component, Node, systemEvent, SystemEvent, Camera, find, Vec3, PhysicsSystem, TERRAIN_HEIGHT_BASE, CanvasComponent, ColliderComponent, BoxColliderComponent, Label, tween, Tween, ParticleSystemComponent, Prefab, instantiate, ParticleUtils, ParticleSystem } from 'cc';
+import { _decorator, Component, Node, systemEvent, SystemEvent, Camera, find, Vec3, PhysicsSystem, TERRAIN_HEIGHT_BASE, CanvasComponent, ColliderComponent, BoxColliderComponent, Label, tween, Tween, ParticleSystemComponent, Prefab, instantiate, ParticleUtils, ParticleSystem, JsonAsset, loader, RigidBody, RigidBodyComponent } from 'cc';
 import { Constants } from './data/Constants';
 import { RunTimeData } from './data/GameData';
+import { GameMap } from './gameMap/GameMap';
+import { MapManager } from './gameMap/MapManager';
 import { UIManager } from './UI/UIManager';
 import { CustomEventListener } from './utils/CustomEventListener';
+import { MapRes } from './utils/MapRes';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameCtrl')
 export class GameCtrl extends Component {
-    private Sphere: Node = null;
-    private Cube: Node = null;
-    private Capsule: Node = null;
-    private Torus: Node = null;
-    private Cone: Node = null;
-    private Cylinder:Node = null;
     private SecondaryPlane:Node = null;
     @property(Node)
     private Hole:Node = null;
-    @property(Label)
-    private Score:Label = null;
     @property(Camera)
     private camera: Camera = null;
     @property(Prefab)
@@ -27,26 +22,31 @@ export class GameCtrl extends Component {
     private targetModel: Node = null;
     private targetModelTween: Tween = null;
     private _gas = null;
-    private _runTimeData: RunTimeData = null;
+    private _runTimeData: RunTimeData = RunTimeData.instance();
     private gameState = Constants.GameState.INIT;
+    private mapComp = null;
+    private mapManager = null;
+    private pairModel = null;
     
     start () {
-        this.Sphere = this.node.getChildByName('Sphere');
-        this.Cube = this.node.getChildByName('Cube');
-        this.Capsule = this.node.getChildByName('Capsule');
-        this.Torus = this.node.getChildByName('Torus');
-        this.Cone = this.node.getChildByName('Cone');
-        this.Cylinder = this.node.getChildByName('Cylinder');
-        this.SecondaryPlane = this.node.getChildByName('SecondaryPlane'); // 辅助器，用于移动3d目标检测碰撞使用
-        this.SecondaryPlane.active = false;
+        this.mapManager = find('mapManager');
         this.touchState = Constants.TouchState.IDLE;
-        // this.Sphere.setWorldPosition(new Vec3(0, 2, 8.522))
-        this.gameStart();
+        MapManager.showMap(`map-${this._runTimeData.level}`, (mapComp) => {
+            console.log('load map ok')
+            this.SecondaryPlane = this.mapManager
+                .getChildByName(`map-${this._runTimeData.level}`)
+                .getChildByName('SecondaryPlane'); // 辅助器，用于移动3d目标检测碰撞使用
+            this.SecondaryPlane.active = false;
+            this.mapComp = mapComp;
+            console.log(mapComp)
+            this.gameStart();
+        });
         systemEvent.on(SystemEvent.EventType.TOUCH_START, this.onTouchStart, this);
         systemEvent.on(SystemEvent.EventType.TOUCH_MOVE, this.onTouchMove, this);
         systemEvent.on(SystemEvent.EventType.TOUCH_END, this.onTouchEnd, this);
         systemEvent.on(SystemEvent.EventType.TOUCH_CANCEL, this.onTouchCancel, this);
         CustomEventListener.on(Constants.EventName.GAME_START, this.gameStart, this)
+        CustomEventListener.on(Constants.EventName.GAME_NEXT_START, this.gameNextStart, this)
         CustomEventListener.on(Constants.GameState.PLAYING, this.play, this);
         CustomEventListener.on(Constants.GameState.OVER, this.gameOver, this);
     }
@@ -66,12 +66,14 @@ export class GameCtrl extends Component {
             let nodeName = PhysicsSystem.instance.raycastClosestResult.collider.node.name
             console.log(nodeName)
             if (nodeName.match('Wall')) {
+                systemEvent.emit(SystemEvent.EventType.TOUCH_CANCEL)
                 return;
             }
             if (nodeName === 'hole-node') {
                 if(!this.targetModel) return;
                 nodeName = this.targetModel.name
             }
+            this[nodeName] = this.mapManager.getChildByName(`map-${this._runTimeData.level}`).getChildByName(nodeName);
             const hitPoint = PhysicsSystem.instance.raycastClosestResult.hitPoint;
             hitPoint.y = this[nodeName].getWorldPosition().y
             this.SecondaryPlane.setWorldPosition(new Vec3(0, hitPoint.y, 0));
@@ -103,36 +105,118 @@ export class GameCtrl extends Component {
         const distance = Vec3.distance(this.targetModel.worldPosition, this.Hole.worldPosition)
         if(distance < 3.5) {
             this.takeInTheHole();
+            return;
         }
+        // this.takeOutTheHole();
+        // ??
     }
 
     private takeInTheHole() {
-        if (!this.targetModel || this.touchState === Constants.TouchState.ON_COLLISION) return;
-        this.touchState = Constants.TouchState.ON_COLLISION;
+        if (!this.targetModel || this.touchState === Constants.TouchState.IN_THE_HOLE) return;
+        this.touchState = Constants.TouchState.IN_THE_HOLE;
         console.log('take')
+        if (this.mapComp.type === GameMap.MapGoalType.OBJECT) {
+            this.disObjectHandler();
+            return;
+        }
+        if (this.mapComp.type === GameMap.MapGoalType.PAIRS) {
+            this.disPairsHandler();
+            return;
+        }
+    }
+
+    private takeOutTheHole(cb?: Function) {
         tween(this.targetModel).to(0.3, {
             worldPosition: new Vec3(0, 1, 8.225),
             eulerAngles: new Vec3(0, 0, 0)
         }).call(() => {
-            // this.targetModel.lookAt(new Vec3(0, 5, 8.225));
+            this.targetModel.getComponent(RigidBodyComponent).applyForce(new Vec3(1, 1, -500));
+            this.recycleData()
+            if (cb) cb();
         }).start();
-        this.SecondaryPlane.setWorldPosition(new Vec3(0, 0, 0));
-        this.SecondaryPlane.active = false;
-        this.showGas();
-        this.scheduleOnce(() => {
-            systemEvent.emit(SystemEvent.EventType.TOUCH_CANCEL)
-            this.targetModel.active = false;
-            // this.node.removeChild(this.targetModel);
-            this.screenPos = null;
-            this.targetModel = null;
-            if (this.gameState === Constants.GameState.OVER) return;
-            this._runTimeData.currProgress += 1;
-            this.Score.string = `收集：${this._runTimeData.currProgress}`;
-            if (this._runTimeData.currProgress >= 3) {
-                this.gameSuccess();
-            }
-        }, 1)
+    }
 
+    private disObjectHandler() {
+        console.log(this.targetModel.name, this.mapComp.goals)
+        console.log(this.mapComp.goals.indexOf(this.targetModel.name) !== -1)
+        if (this.mapComp.goals.indexOf(this.targetModel.name) !== -1) {
+            tween(this.targetModel).to(0.3, {
+                worldPosition: new Vec3(0, 1, 8.225),
+                eulerAngles: new Vec3(0, 0, 0)
+            }).call(() => {
+                // this.targetModel.lookAt(new Vec3(0, 5, 8.225));
+            }).start();
+            this.SecondaryPlane.setWorldPosition(new Vec3(0, 0, 0));
+            this.SecondaryPlane.active = false;
+            this.showGas();
+            this.scheduleOnce(() => {
+                this.targetModel.active = false;
+                // this.node.removeChild(this.targetModel);
+                this.recycleData();
+                this.updateProgress();
+            }, 0.3)
+            return;
+        }
+        this.wrongModelAnimate();
+    }
+
+    private updateProgress(){
+        if (this.gameState === Constants.GameState.OVER) return;
+        this._runTimeData.currProgress += 1;
+        CustomEventListener.dispatchEvent(Constants.EventName.UPDATE_PROGRESS)
+        if (this._runTimeData.currProgress >= this._runTimeData.maxProgress) {
+            this.gameSuccess();
+        }
+    }
+
+    private wrongModelAnimate(cb? : Function) {
+        tween(this.targetModel).to(0.3, {
+            worldPosition: new Vec3(0, 1, 8.225),
+            eulerAngles: new Vec3(0, 0, 0)
+        }).call(() => {
+            this.targetModel.getComponent(RigidBodyComponent).applyForce(new Vec3(1, 1, -2000));
+            this.recycleData()
+            if (cb) cb();
+        }).start();
+    }
+
+    private disPairsHandler() {
+        if (!this.pairModel) {
+            this.pairModel = this.targetModel;
+            tween(this.targetModel).to(0.3, {
+                worldPosition: new Vec3(0, 1, 8.225),
+                eulerAngles: new Vec3(0, 0, 0)
+            }).call(() => {
+                this.recycleData();
+            }).start();
+            return;
+        }
+        if (this.pairModel === this.targetModel) {
+            this.takeOutTheHole(() => {
+                this.pairModel = null;
+                this.targetModel = null;
+            });
+            return;
+        }
+        const inPairModelName = this.pairModel.name.split('-')[0];
+        const targetModelName = this.targetModel.name.split('-')[0];
+        if (inPairModelName === targetModelName) {
+            this.pairModel.active = false;
+            this.targetModel.active = false;
+            this.pairModel = null;
+            this.showGas();
+            this.recycleData();
+            this.updateProgress();
+            return;
+        }
+
+        this.wrongModelAnimate();
+    }
+
+    private recycleData() {
+        systemEvent.emit(SystemEvent.EventType.TOUCH_CANCEL)
+        this.screenPos = null;
+        this.targetModel = null;
     }
 
     private showGas() {
@@ -185,11 +269,11 @@ export class GameCtrl extends Component {
         this.scheduleOnce(() => {
             this.touchState = Constants.TouchState.IDLE;
             this.clearTween();
-        }, 1)
+        }, 0.3)
     }
     private onTouchCancel() {
         this.touchState = Constants.TouchState.IDLE;
-            this.clearTween();
+        this.clearTween();
     }
 
     private clearTween() {
@@ -200,19 +284,15 @@ export class GameCtrl extends Component {
 
     private initGameData() {
         this._runTimeData = RunTimeData.instance();
-        this._runTimeData.maxProgress = 5;
+        this._runTimeData.maxProgress = this.mapComp.maxProgress;
         this._runTimeData.currProgress = 0;
-        this._runTimeData.time = 8;
+        this._runTimeData.time = this.mapComp.time;
         this._runTimeData.isTakeInHoleOver = true;
+        this._runTimeData.targetName = this.mapComp.targetName;
     }
 
     private initMap() {
-        this.Sphere.active = true;
-        this.Cube.active = true;
-        this.Capsule.active = true;
-        this.Torus.active = true;
-        this.Cone.active = true;
-        this.Cylinder.active = true;
+        this.mapComp.resetMap();
         this.gameState = Constants.GameState.INIT;
         this.touchState = Constants.TouchState.IDLE;
     }
@@ -223,6 +303,21 @@ export class GameCtrl extends Component {
         UIManager.showUI(Constants.UI.MAIN_UI);
         UIManager.hideUI(Constants.UI.GAME_OVER_UI);
         UIManager.hideUI(Constants.UI.GAME_UI);
+    }
+
+    private gameNextStart() {
+        this.mapManager.removeAllChildren();
+        this._runTimeData.level ++;
+        MapManager.showMap(`map-${this._runTimeData.level}`, (mapComp) => {
+            console.log('load map ok')
+            this.SecondaryPlane = this.mapManager
+                .getChildByName(`map-${this._runTimeData.level}`)
+                .getChildByName('SecondaryPlane'); // 辅助器，用于移动3d目标检测碰撞使用
+            this.SecondaryPlane.active = false;
+            this.mapComp = mapComp;
+            console.log(mapComp)
+            this.gameStart();
+        });
     }
 
     private play() {
@@ -240,7 +335,7 @@ export class GameCtrl extends Component {
 
     private gameOver() {
         this.gameState = Constants.GameState.OVER;
-        if (this._runTimeData.currProgress >= 3) {
+        if (this._runTimeData.currProgress >= this._runTimeData.maxProgress) {
             this.gameSuccess();
             return;
         }
