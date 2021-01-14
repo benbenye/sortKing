@@ -12,7 +12,7 @@ export class RunTimeData {
         return this._instance;
     }
 
-    public level = 4;
+    public level = 1;
     public currProgress = 0;
     public maxProgress = 0;
     public time = 150; // 秒

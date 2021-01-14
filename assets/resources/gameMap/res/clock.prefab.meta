@@ -1,0 +1,13 @@
+{
+  "ver": "1.1.20",
+  "importer": "prefab",
+  "imported": true,
+  "uuid": "c5f0bc97-85f6-45f8-9028-4525d5bac15c",
+  "files": [
+    ".json"
+  ],
+  "subMetas": {},
+  "userData": {
+    "syncNodeName": "clock"
+  }
+}

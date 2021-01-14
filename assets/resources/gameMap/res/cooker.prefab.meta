@@ -1,0 +1,13 @@
+{
+  "ver": "1.1.20",
+  "importer": "prefab",
+  "imported": true,
+  "uuid": "3e00908f-7701-4bb1-81eb-ea82d9f3e3fb",
+  "files": [
+    ".json"
+  ],
+  "subMetas": {},
+  "userData": {
+    "syncNodeName": "cooker"
+  }
+}

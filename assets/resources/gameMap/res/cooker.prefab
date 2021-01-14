@@ -12,7 +12,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "chair1",
+    "_name": "cooker",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -35,7 +35,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 1,
+      "y": 0,
       "z": 0
     },
     "_lrot": {
@@ -107,7 +107,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "chair1_root",
+    "_name": "cooker_root",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -152,7 +152,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "chair1_0",
+    "_name": "cooker_0",
     "_objFlags": 0,
     "_parent": {
       "__id__": 3
@@ -205,7 +205,7 @@
     "_enabled": true,
     "_materials": [
       {
-        "__uuid__": "d57b5c9b-6b46-4337-8734-67afe2367d23"
+        "__uuid__": "0ab8963e-5582-4088-8971-b2d50cae51c4"
       }
     ],
     "_visFlags": 0,
@@ -213,7 +213,7 @@
       "__id__": 6
     },
     "_mesh": {
-      "__uuid__": "a85d7e64-82f3-4ef6-9e81-ce413e720d84@162b2"
+      "__uuid__": "acf614b6-5775-43e1-bd15-6760454c1c5b@d973d"
     },
     "_shadowCastingMode": 0,
     "_shadowReceivingMode": 1,
@@ -244,7 +244,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "88wGBbLx9L/Ztzewh8jKhS",
+    "fileId": "c8W0JPU7lCdpp+OrOkDhkW",
     "sync": false,
     "_synced": {
       "default": false,
@@ -259,7 +259,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "89Atpo5ixLF5kpewxIgKs2",
+    "fileId": "46OFgsQSlB7ZMLYey3q6en",
     "sync": false,
     "_synced": {
       "default": false,
@@ -274,7 +274,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "90YIyFCj9HJ6lkSEqtfeD7",
+    "fileId": "03derzfNZGdrw6cdeYeuqy",
     "sync": false,
     "_synced": {
       "default": false,
@@ -290,7 +290,7 @@
     },
     "_enabled": true,
     "_material": null,
-    "_isTrigger": true,
+    "_isTrigger": false,
     "_center": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -299,9 +299,9 @@
     },
     "_size": {
       "__type__": "cc.Vec3",
-      "x": 0.003,
-      "y": 0.003,
-      "z": 0.003
+      "x": 0.004,
+      "y": 0.004,
+      "z": 0.004
     },
     "_id": ""
   },
@@ -315,7 +315,7 @@
     "_enabled": true,
     "_group": 1,
     "_mass": 1,
-    "_allowSleep": false,
+    "_allowSleep": true,
     "_linearDamping": 0.1,
     "_angularDamping": 0.1,
     "_fixedRotation": false,
@@ -343,7 +343,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "16hTbjBZpLCKO9+cOadCYF",
+    "fileId": "68b1snsFtGNpMrpOCQoEc7",
     "sync": false,
     "_synced": {
       "default": false,

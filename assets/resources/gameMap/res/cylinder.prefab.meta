@@ -1,0 +1,13 @@
+{
+  "ver": "1.1.20",
+  "importer": "prefab",
+  "imported": true,
+  "uuid": "e49d565d-90fc-44b2-9854-9ffec21cef86",
+  "files": [
+    ".json"
+  ],
+  "subMetas": {},
+  "userData": {
+    "syncNodeName": "cylinder"
+  }
+}

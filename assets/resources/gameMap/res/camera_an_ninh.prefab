@@ -12,7 +12,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "chair1",
+    "_name": "camera_an_ninh",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -35,7 +35,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 1,
+      "y": 0,
       "z": 0
     },
     "_lrot": {
@@ -107,7 +107,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "chair1_root",
+    "_name": "camera_an_ninh_root",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -152,7 +152,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "chair1_0",
+    "_name": "camera_an_ninh_0",
     "_objFlags": 0,
     "_parent": {
       "__id__": 3
@@ -205,7 +205,7 @@
     "_enabled": true,
     "_materials": [
       {
-        "__uuid__": "d57b5c9b-6b46-4337-8734-67afe2367d23"
+        "__uuid__": "e84d4459-e674-4a28-a076-fe6bb26dbb6d"
       }
     ],
     "_visFlags": 0,
@@ -213,7 +213,7 @@
       "__id__": 6
     },
     "_mesh": {
-      "__uuid__": "a85d7e64-82f3-4ef6-9e81-ce413e720d84@162b2"
+      "__uuid__": "5e766fd6-987d-4341-b589-ace0b9f13a6d@dee17"
     },
     "_shadowCastingMode": 0,
     "_shadowReceivingMode": 1,
@@ -244,7 +244,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "88wGBbLx9L/Ztzewh8jKhS",
+    "fileId": "90wZi2do9FO6eTdkY6ent2",
     "sync": false,
     "_synced": {
       "default": false,
@@ -259,7 +259,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "89Atpo5ixLF5kpewxIgKs2",
+    "fileId": "e3syBaMyVNw6AyHpncif9q",
     "sync": false,
     "_synced": {
       "default": false,
@@ -274,7 +274,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "90YIyFCj9HJ6lkSEqtfeD7",
+    "fileId": "d88m48OrRCl4GhUgdwrESa",
     "sync": false,
     "_synced": {
       "default": false,
@@ -290,7 +290,7 @@
     },
     "_enabled": true,
     "_material": null,
-    "_isTrigger": true,
+    "_isTrigger": false,
     "_center": {
       "__type__": "cc.Vec3",
       "x": 0,
@@ -300,7 +300,7 @@
     "_size": {
       "__type__": "cc.Vec3",
       "x": 0.003,
-      "y": 0.003,
+      "y": 0.005,
       "z": 0.003
     },
     "_id": ""
@@ -343,7 +343,7 @@
     "asset": {
       "__id__": 0
     },
-    "fileId": "16hTbjBZpLCKO9+cOadCYF",
+    "fileId": "8dmIhq2E1Cr50ea90GHm45",
     "sync": false,
     "_synced": {
       "default": false,
