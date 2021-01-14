@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "6eb2eace-483a-4847-9d5a-171a077170cd",
+  "files": [],
+  "subMetas": {
+    "a935c": {
+      "importer": "gltf-mesh",
+      "uuid": "6eb2eace-483a-4847-9d5a-171a077170cd@a935c",
+      "displayName": "",
+      "id": "a935c",
+      "name": "clock_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5eda6": {
+      "importer": "gltf-material",
+      "uuid": "6eb2eace-483a-4847-9d5a-171a077170cd@5eda6",
+      "displayName": "",
+      "id": "5eda6",
+      "name": "clock_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b76ee": {
+      "importer": "gltf-scene",
+      "uuid": "6eb2eace-483a-4847-9d5a-171a077170cd@b76ee",
+      "displayName": "",
+      "id": "b76ee",
+      "name": "clock.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "6eb2eace-483a-4847-9d5a-171a077170cd@b76ee",
+    "assetFinder": {
+      "meshes": [
+        "6eb2eace-483a-4847-9d5a-171a077170cd@a935c"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "6eb2eace-483a-4847-9d5a-171a077170cd@5eda6"
+      ],
+      "scenes": [
+        "6eb2eace-483a-4847-9d5a-171a077170cd@b76ee"
+      ]
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "c924e632-c12b-458e-845b-cf7cec271c77",
+  "files": [],
+  "subMetas": {
+    "2d13b": {
+      "importer": "gltf-mesh",
+      "uuid": "c924e632-c12b-458e-845b-cf7cec271c77@2d13b",
+      "displayName": "",
+      "id": "2d13b",
+      "name": "polySurface564_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "85bdb": {
+      "importer": "gltf-material",
+      "uuid": "c924e632-c12b-458e-845b-cf7cec271c77@85bdb",
+      "displayName": "",
+      "id": "85bdb",
+      "name": "polySurface564_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "310f1": {
+      "importer": "gltf-scene",
+      "uuid": "c924e632-c12b-458e-845b-cf7cec271c77@310f1",
+      "displayName": "",
+      "id": "310f1",
+      "name": "polySurface564.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "c924e632-c12b-458e-845b-cf7cec271c77@310f1",
+    "assetFinder": {
+      "meshes": [
+        "c924e632-c12b-458e-845b-cf7cec271c77@2d13b"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "c924e632-c12b-458e-845b-cf7cec271c77@85bdb"
+      ],
+      "scenes": [
+        "c924e632-c12b-458e-845b-cf7cec271c77@310f1"
+      ]
+    }
+  }
+}

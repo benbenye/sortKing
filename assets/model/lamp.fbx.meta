@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "cc4080e4-2cf1-4d32-b250-c09d39205871",
+  "files": [],
+  "subMetas": {
+    "efbba": {
+      "importer": "gltf-mesh",
+      "uuid": "cc4080e4-2cf1-4d32-b250-c09d39205871@efbba",
+      "displayName": "",
+      "id": "efbba",
+      "name": "lamp_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "99bbe": {
+      "importer": "gltf-material",
+      "uuid": "cc4080e4-2cf1-4d32-b250-c09d39205871@99bbe",
+      "displayName": "",
+      "id": "99bbe",
+      "name": "lamp_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7fa36": {
+      "importer": "gltf-scene",
+      "uuid": "cc4080e4-2cf1-4d32-b250-c09d39205871@7fa36",
+      "displayName": "",
+      "id": "7fa36",
+      "name": "lamp.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "cc4080e4-2cf1-4d32-b250-c09d39205871@7fa36",
+    "assetFinder": {
+      "meshes": [
+        "cc4080e4-2cf1-4d32-b250-c09d39205871@efbba"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "cc4080e4-2cf1-4d32-b250-c09d39205871@99bbe"
+      ],
+      "scenes": [
+        "cc4080e4-2cf1-4d32-b250-c09d39205871@7fa36"
+      ]
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "3f16fdf1-e97f-41ac-ac52-3bea7d5a61ea",
+  "files": [],
+  "subMetas": {
+    "57cc3": {
+      "importer": "gltf-mesh",
+      "uuid": "3f16fdf1-e97f-41ac-ac52-3bea7d5a61ea@57cc3",
+      "displayName": "",
+      "id": "57cc3",
+      "name": "hairdryer_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2d794": {
+      "importer": "gltf-material",
+      "uuid": "3f16fdf1-e97f-41ac-ac52-3bea7d5a61ea@2d794",
+      "displayName": "",
+      "id": "2d794",
+      "name": "hairdryer_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f7e66": {
+      "importer": "gltf-scene",
+      "uuid": "3f16fdf1-e97f-41ac-ac52-3bea7d5a61ea@f7e66",
+      "displayName": "",
+      "id": "f7e66",
+      "name": "hairdryer.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "3f16fdf1-e97f-41ac-ac52-3bea7d5a61ea@f7e66",
+    "assetFinder": {
+      "meshes": [
+        "3f16fdf1-e97f-41ac-ac52-3bea7d5a61ea@57cc3"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "3f16fdf1-e97f-41ac-ac52-3bea7d5a61ea@2d794"
+      ],
+      "scenes": [
+        "3f16fdf1-e97f-41ac-ac52-3bea7d5a61ea@f7e66"
+      ]
+    }
+  }
+}

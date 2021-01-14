@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "29c3a365-81ca-4dc0-af5a-2d57ca11b583",
+  "files": [],
+  "subMetas": {
+    "06541": {
+      "importer": "gltf-mesh",
+      "uuid": "29c3a365-81ca-4dc0-af5a-2d57ca11b583@06541",
+      "displayName": "",
+      "id": "06541",
+      "name": "dia_tron_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7f617": {
+      "importer": "gltf-material",
+      "uuid": "29c3a365-81ca-4dc0-af5a-2d57ca11b583@7f617",
+      "displayName": "",
+      "id": "7f617",
+      "name": "dia_tron_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "40e2b": {
+      "importer": "gltf-scene",
+      "uuid": "29c3a365-81ca-4dc0-af5a-2d57ca11b583@40e2b",
+      "displayName": "",
+      "id": "40e2b",
+      "name": "dia_tron.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "29c3a365-81ca-4dc0-af5a-2d57ca11b583@40e2b",
+    "assetFinder": {
+      "meshes": [
+        "29c3a365-81ca-4dc0-af5a-2d57ca11b583@06541"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "29c3a365-81ca-4dc0-af5a-2d57ca11b583@7f617"
+      ],
+      "scenes": [
+        "29c3a365-81ca-4dc0-af5a-2d57ca11b583@40e2b"
+      ]
+    }
+  }
+}

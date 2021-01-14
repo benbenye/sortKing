@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "ebc78b65-5388-42b2-aefe-99057749b9ba",
+  "files": [],
+  "subMetas": {
+    "65330": {
+      "importer": "gltf-mesh",
+      "uuid": "ebc78b65-5388-42b2-aefe-99057749b9ba@65330",
+      "displayName": "",
+      "id": "65330",
+      "name": "thung_rac1_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "71fc9": {
+      "importer": "gltf-material",
+      "uuid": "ebc78b65-5388-42b2-aefe-99057749b9ba@71fc9",
+      "displayName": "",
+      "id": "71fc9",
+      "name": "thung_rac1_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a57c4": {
+      "importer": "gltf-scene",
+      "uuid": "ebc78b65-5388-42b2-aefe-99057749b9ba@a57c4",
+      "displayName": "",
+      "id": "a57c4",
+      "name": "thung_rac1.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "ebc78b65-5388-42b2-aefe-99057749b9ba@a57c4",
+    "assetFinder": {
+      "meshes": [
+        "ebc78b65-5388-42b2-aefe-99057749b9ba@65330"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "ebc78b65-5388-42b2-aefe-99057749b9ba@71fc9"
+      ],
+      "scenes": [
+        "ebc78b65-5388-42b2-aefe-99057749b9ba@a57c4"
+      ]
+    }
+  }
+}

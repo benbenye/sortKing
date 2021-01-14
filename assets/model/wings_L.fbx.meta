@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "88543304-b5e6-49df-863f-763f5787d5e5",
+  "files": [],
+  "subMetas": {
+    "b6876": {
+      "importer": "gltf-mesh",
+      "uuid": "88543304-b5e6-49df-863f-763f5787d5e5@b6876",
+      "displayName": "",
+      "id": "b6876",
+      "name": "wings_L_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "922ed": {
+      "importer": "gltf-material",
+      "uuid": "88543304-b5e6-49df-863f-763f5787d5e5@922ed",
+      "displayName": "",
+      "id": "922ed",
+      "name": "wings_L_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c4636": {
+      "importer": "gltf-scene",
+      "uuid": "88543304-b5e6-49df-863f-763f5787d5e5@c4636",
+      "displayName": "",
+      "id": "c4636",
+      "name": "wings_L.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "88543304-b5e6-49df-863f-763f5787d5e5@c4636",
+    "assetFinder": {
+      "meshes": [
+        "88543304-b5e6-49df-863f-763f5787d5e5@b6876"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "88543304-b5e6-49df-863f-763f5787d5e5@922ed"
+      ],
+      "scenes": [
+        "88543304-b5e6-49df-863f-763f5787d5e5@c4636"
+      ]
+    }
+  }
+}

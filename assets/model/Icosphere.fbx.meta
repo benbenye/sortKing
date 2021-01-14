@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "5d38f7c4-6b78-4fe7-b960-7d251ead7c5f",
+  "files": [],
+  "subMetas": {
+    "e3542": {
+      "importer": "gltf-mesh",
+      "uuid": "5d38f7c4-6b78-4fe7-b960-7d251ead7c5f@e3542",
+      "displayName": "",
+      "id": "e3542",
+      "name": "Icosphere_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6c03d": {
+      "importer": "gltf-material",
+      "uuid": "5d38f7c4-6b78-4fe7-b960-7d251ead7c5f@6c03d",
+      "displayName": "",
+      "id": "6c03d",
+      "name": "Icosphere_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c1113": {
+      "importer": "gltf-scene",
+      "uuid": "5d38f7c4-6b78-4fe7-b960-7d251ead7c5f@c1113",
+      "displayName": "",
+      "id": "c1113",
+      "name": "Icosphere.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "5d38f7c4-6b78-4fe7-b960-7d251ead7c5f@c1113",
+    "assetFinder": {
+      "meshes": [
+        "5d38f7c4-6b78-4fe7-b960-7d251ead7c5f@e3542"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "5d38f7c4-6b78-4fe7-b960-7d251ead7c5f@6c03d"
+      ],
+      "scenes": [
+        "5d38f7c4-6b78-4fe7-b960-7d251ead7c5f@c1113"
+      ]
+    }
+  }
+}

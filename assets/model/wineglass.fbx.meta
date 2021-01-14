@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "1209f540-e220-4b46-ac78-ad8694b94edd",
+  "files": [],
+  "subMetas": {
+    "0cca3": {
+      "importer": "gltf-mesh",
+      "uuid": "1209f540-e220-4b46-ac78-ad8694b94edd@0cca3",
+      "displayName": "",
+      "id": "0cca3",
+      "name": "wineglass_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c0caa": {
+      "importer": "gltf-material",
+      "uuid": "1209f540-e220-4b46-ac78-ad8694b94edd@c0caa",
+      "displayName": "",
+      "id": "c0caa",
+      "name": "wineglass_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "659b1": {
+      "importer": "gltf-scene",
+      "uuid": "1209f540-e220-4b46-ac78-ad8694b94edd@659b1",
+      "displayName": "",
+      "id": "659b1",
+      "name": "wineglass.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "1209f540-e220-4b46-ac78-ad8694b94edd@659b1",
+    "assetFinder": {
+      "meshes": [
+        "1209f540-e220-4b46-ac78-ad8694b94edd@0cca3"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "1209f540-e220-4b46-ac78-ad8694b94edd@c0caa"
+      ],
+      "scenes": [
+        "1209f540-e220-4b46-ac78-ad8694b94edd@659b1"
+      ]
+    }
+  }
+}

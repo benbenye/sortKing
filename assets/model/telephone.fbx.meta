@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "568fe6f8-8971-4c1c-b7de-44dce2b0799e",
+  "files": [],
+  "subMetas": {
+    "be1d4": {
+      "importer": "gltf-mesh",
+      "uuid": "568fe6f8-8971-4c1c-b7de-44dce2b0799e@be1d4",
+      "displayName": "",
+      "id": "be1d4",
+      "name": "telephone_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "919b1": {
+      "importer": "gltf-material",
+      "uuid": "568fe6f8-8971-4c1c-b7de-44dce2b0799e@919b1",
+      "displayName": "",
+      "id": "919b1",
+      "name": "telephone_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "45fc7": {
+      "importer": "gltf-scene",
+      "uuid": "568fe6f8-8971-4c1c-b7de-44dce2b0799e@45fc7",
+      "displayName": "",
+      "id": "45fc7",
+      "name": "telephone.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "568fe6f8-8971-4c1c-b7de-44dce2b0799e@45fc7",
+    "assetFinder": {
+      "meshes": [
+        "568fe6f8-8971-4c1c-b7de-44dce2b0799e@be1d4"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "568fe6f8-8971-4c1c-b7de-44dce2b0799e@919b1"
+      ],
+      "scenes": [
+        "568fe6f8-8971-4c1c-b7de-44dce2b0799e@45fc7"
+      ]
+    }
+  }
+}

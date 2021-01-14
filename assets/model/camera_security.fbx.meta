@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "251e165b-71a2-4870-a637-d3d7fe8cd02a",
+  "files": [],
+  "subMetas": {
+    "47502": {
+      "importer": "gltf-material",
+      "uuid": "251e165b-71a2-4870-a637-d3d7fe8cd02a@47502",
+      "displayName": "",
+      "id": "47502",
+      "name": "camera_security_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "364e7": {
+      "importer": "gltf-mesh",
+      "uuid": "251e165b-71a2-4870-a637-d3d7fe8cd02a@364e7",
+      "displayName": "",
+      "id": "364e7",
+      "name": "camera_security_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "490ef": {
+      "importer": "gltf-scene",
+      "uuid": "251e165b-71a2-4870-a637-d3d7fe8cd02a@490ef",
+      "displayName": "",
+      "id": "490ef",
+      "name": "camera_security.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "251e165b-71a2-4870-a637-d3d7fe8cd02a@490ef",
+    "assetFinder": {
+      "meshes": [
+        "251e165b-71a2-4870-a637-d3d7fe8cd02a@364e7"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "251e165b-71a2-4870-a637-d3d7fe8cd02a@47502"
+      ],
+      "scenes": [
+        "251e165b-71a2-4870-a637-d3d7fe8cd02a@490ef"
+      ]
+    }
+  }
+}

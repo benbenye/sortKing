@@ -1,0 +1,61 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "91fde9c3-5440-4e32-9e71-a2cc85a15d68",
+  "files": [],
+  "subMetas": {
+    "5e8f1": {
+      "importer": "gltf-mesh",
+      "uuid": "91fde9c3-5440-4e32-9e71-a2cc85a15d68@5e8f1",
+      "displayName": "",
+      "id": "5e8f1",
+      "name": "camera_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f7495": {
+      "importer": "gltf-scene",
+      "uuid": "91fde9c3-5440-4e32-9e71-a2cc85a15d68@f7495",
+      "displayName": "",
+      "id": "f7495",
+      "name": "camera.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "91fde9c3-5440-4e32-9e71-a2cc85a15d68@f7495",
+    "assetFinder": {
+      "meshes": [
+        "91fde9c3-5440-4e32-9e71-a2cc85a15d68@5e8f1"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "284d5fb7-2017-4d14-82d5-4c59207fa4b6"
+      ],
+      "scenes": [
+        "91fde9c3-5440-4e32-9e71-a2cc85a15d68@f7495"
+      ]
+    },
+    "dumpMaterials": true,
+    "materialDumpDir": "db://assets/wpfl/Mesh/Materials_camera"
+  }
+}

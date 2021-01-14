@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "aaa0b45a-3e94-4186-bf09-041b490c3f3b",
+  "files": [],
+  "subMetas": {
+    "79ddc": {
+      "importer": "gltf-mesh",
+      "uuid": "aaa0b45a-3e94-4186-bf09-041b490c3f3b@79ddc",
+      "displayName": "",
+      "id": "79ddc",
+      "name": "Quad_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0287b": {
+      "importer": "gltf-material",
+      "uuid": "aaa0b45a-3e94-4186-bf09-041b490c3f3b@0287b",
+      "displayName": "",
+      "id": "0287b",
+      "name": "Quad_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5c88f": {
+      "importer": "gltf-scene",
+      "uuid": "aaa0b45a-3e94-4186-bf09-041b490c3f3b@5c88f",
+      "displayName": "",
+      "id": "5c88f",
+      "name": "Quad.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "aaa0b45a-3e94-4186-bf09-041b490c3f3b@5c88f",
+    "assetFinder": {
+      "meshes": [
+        "aaa0b45a-3e94-4186-bf09-041b490c3f3b@79ddc"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "aaa0b45a-3e94-4186-bf09-041b490c3f3b@0287b"
+      ],
+      "scenes": [
+        "aaa0b45a-3e94-4186-bf09-041b490c3f3b@5c88f"
+      ]
+    }
+  }
+}

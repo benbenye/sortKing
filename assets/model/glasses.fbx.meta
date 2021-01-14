@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "8c8baa05-dc78-44a6-a6c6-d8505a608b5e",
+  "files": [],
+  "subMetas": {
+    "bd271": {
+      "importer": "gltf-mesh",
+      "uuid": "8c8baa05-dc78-44a6-a6c6-d8505a608b5e@bd271",
+      "displayName": "",
+      "id": "bd271",
+      "name": "glasses_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0084d": {
+      "importer": "gltf-material",
+      "uuid": "8c8baa05-dc78-44a6-a6c6-d8505a608b5e@0084d",
+      "displayName": "",
+      "id": "0084d",
+      "name": "glasses_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c48a8": {
+      "importer": "gltf-scene",
+      "uuid": "8c8baa05-dc78-44a6-a6c6-d8505a608b5e@c48a8",
+      "displayName": "",
+      "id": "c48a8",
+      "name": "glasses.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "8c8baa05-dc78-44a6-a6c6-d8505a608b5e@c48a8",
+    "assetFinder": {
+      "meshes": [
+        "8c8baa05-dc78-44a6-a6c6-d8505a608b5e@bd271"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "8c8baa05-dc78-44a6-a6c6-d8505a608b5e@0084d"
+      ],
+      "scenes": [
+        "8c8baa05-dc78-44a6-a6c6-d8505a608b5e@c48a8"
+      ]
+    }
+  }
+}

@@ -63,11 +63,9 @@
     "_enabled": true,
     "_materials": [
       {
-        "__uuid__": "ea7478b0-408d-4052-b703-f0d2355e095f"
+        "__uuid__": "87d62f3a-557b-4509-8d3c-ae549d091cc7"
       },
-      {
-        "__uuid__": "3f8a113d-abaf-4a7a-8b2a-fc5c08ed4ca7"
-      }
+      null
     ],
     "_visFlags": 0,
     "startColor": {
@@ -164,9 +162,9 @@
     "_mode": 0,
     "color": {
       "__type__": "cc.Color",
-      "r": 206,
-      "g": 179,
-      "b": 38,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     }
   },
@@ -601,7 +599,7 @@
     "_lengthScale": 1,
     "_mesh": null,
     "_mainTexture": {
-      "__uuid__": "b5b27ab1-e740-4398-b407-848fc2b2c897@6c48a"
+      "__uuid__": "feb5ac43-2e39-4f22-bdc4-9feda72b7a57@6c48a"
     },
     "_useGPU": false
   },

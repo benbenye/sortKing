@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "acf614b6-5775-43e1-bd15-6760454c1c5b",
+  "files": [],
+  "subMetas": {
+    "d973d": {
+      "importer": "gltf-mesh",
+      "uuid": "acf614b6-5775-43e1-bd15-6760454c1c5b@d973d",
+      "displayName": "",
+      "id": "d973d",
+      "name": "cooker_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "def29": {
+      "importer": "gltf-material",
+      "uuid": "acf614b6-5775-43e1-bd15-6760454c1c5b@def29",
+      "displayName": "",
+      "id": "def29",
+      "name": "cooker_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a7a19": {
+      "importer": "gltf-scene",
+      "uuid": "acf614b6-5775-43e1-bd15-6760454c1c5b@a7a19",
+      "displayName": "",
+      "id": "a7a19",
+      "name": "cooker.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "acf614b6-5775-43e1-bd15-6760454c1c5b@a7a19",
+    "assetFinder": {
+      "meshes": [
+        "acf614b6-5775-43e1-bd15-6760454c1c5b@d973d"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "acf614b6-5775-43e1-bd15-6760454c1c5b@def29"
+      ],
+      "scenes": [
+        "acf614b6-5775-43e1-bd15-6760454c1c5b@a7a19"
+      ]
+    }
+  }
+}

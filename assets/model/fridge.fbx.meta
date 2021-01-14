@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "176ed67a-5ba3-4ffe-a787-a4c9ac64b3dd",
+  "files": [],
+  "subMetas": {
+    "48174": {
+      "importer": "gltf-mesh",
+      "uuid": "176ed67a-5ba3-4ffe-a787-a4c9ac64b3dd@48174",
+      "displayName": "",
+      "id": "48174",
+      "name": "fridge_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "93f7d": {
+      "importer": "gltf-material",
+      "uuid": "176ed67a-5ba3-4ffe-a787-a4c9ac64b3dd@93f7d",
+      "displayName": "",
+      "id": "93f7d",
+      "name": "fridge_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3b370": {
+      "importer": "gltf-scene",
+      "uuid": "176ed67a-5ba3-4ffe-a787-a4c9ac64b3dd@3b370",
+      "displayName": "",
+      "id": "3b370",
+      "name": "fridge.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "176ed67a-5ba3-4ffe-a787-a4c9ac64b3dd@3b370",
+    "assetFinder": {
+      "meshes": [
+        "176ed67a-5ba3-4ffe-a787-a4c9ac64b3dd@48174"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "176ed67a-5ba3-4ffe-a787-a4c9ac64b3dd@93f7d"
+      ],
+      "scenes": [
+        "176ed67a-5ba3-4ffe-a787-a4c9ac64b3dd@3b370"
+      ]
+    }
+  }
+}

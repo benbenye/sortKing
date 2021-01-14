@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "6e49566c-a6f5-40a9-8c66-c0956e302c53",
+  "files": [],
+  "subMetas": {
+    "4d3db": {
+      "importer": "gltf-mesh",
+      "uuid": "6e49566c-a6f5-40a9-8c66-c0956e302c53@4d3db",
+      "displayName": "",
+      "id": "4d3db",
+      "name": "dynamite_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2385a": {
+      "importer": "gltf-material",
+      "uuid": "6e49566c-a6f5-40a9-8c66-c0956e302c53@2385a",
+      "displayName": "",
+      "id": "2385a",
+      "name": "dynamite_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4afad": {
+      "importer": "gltf-scene",
+      "uuid": "6e49566c-a6f5-40a9-8c66-c0956e302c53@4afad",
+      "displayName": "",
+      "id": "4afad",
+      "name": "dynamite.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "6e49566c-a6f5-40a9-8c66-c0956e302c53@4afad",
+    "assetFinder": {
+      "meshes": [
+        "6e49566c-a6f5-40a9-8c66-c0956e302c53@4d3db"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "6e49566c-a6f5-40a9-8c66-c0956e302c53@2385a"
+      ],
+      "scenes": [
+        "6e49566c-a6f5-40a9-8c66-c0956e302c53@4afad"
+      ]
+    }
+  }
+}

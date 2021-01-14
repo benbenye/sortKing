@@ -24,8 +24,12 @@ export class UIManager {
         this.showPanel(scriptName, cb, args);
     }
     private static showPanel(name: string, cb?: Function, ...args: any[]) {
+        let parentName = 'Canvas';
+        if (args && args[0].parent) {
+            parentName = args[0].parent;
+        }
         const panel = this._dictPanel.get(name);
-        const parent = find('Canvas');
+        const parent = find(parentName);
         panel.parent = parent;
         const comp = panel.getComponent(name);
 

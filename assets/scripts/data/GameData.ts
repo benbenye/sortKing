@@ -12,10 +12,11 @@ export class RunTimeData {
         return this._instance;
     }
 
-    public level = 1;
+    public level = 4;
     public currProgress = 0;
     public maxProgress = 0;
     public time = 150; // 秒
     public targetName = '';
     public isTakeInHoleOver = true;
+    public mapInfo = null;
 }

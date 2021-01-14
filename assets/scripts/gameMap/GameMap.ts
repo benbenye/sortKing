@@ -50,7 +50,7 @@ export class GameMap extends Component {
             const preY = Math.random() > 0.499 ? 1 : -1; 
             const x = Math.random() * wallSize.x * wallScale.x / 2 * preX;
             const z = Math.random() * (wallSize.y * wallScale.y / 2 - 2) * preY
-            node.setWorldPosition(new Vec3(x, 1, z))
+            node.setWorldPosition(new Vec3(x, 3, z))
         })
     }
 }

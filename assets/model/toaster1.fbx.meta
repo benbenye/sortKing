@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "0c666214-1449-4fca-9ee0-6535611a8c80",
+  "files": [],
+  "subMetas": {
+    "4a8dc": {
+      "importer": "gltf-mesh",
+      "uuid": "0c666214-1449-4fca-9ee0-6535611a8c80@4a8dc",
+      "displayName": "",
+      "id": "4a8dc",
+      "name": "toaster1_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0d344": {
+      "importer": "gltf-material",
+      "uuid": "0c666214-1449-4fca-9ee0-6535611a8c80@0d344",
+      "displayName": "",
+      "id": "0d344",
+      "name": "toaster1_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "afbb7": {
+      "importer": "gltf-scene",
+      "uuid": "0c666214-1449-4fca-9ee0-6535611a8c80@afbb7",
+      "displayName": "",
+      "id": "afbb7",
+      "name": "toaster1.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "0c666214-1449-4fca-9ee0-6535611a8c80@afbb7",
+    "assetFinder": {
+      "meshes": [
+        "0c666214-1449-4fca-9ee0-6535611a8c80@4a8dc"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "0c666214-1449-4fca-9ee0-6535611a8c80@0d344"
+      ],
+      "scenes": [
+        "0c666214-1449-4fca-9ee0-6535611a8c80@afbb7"
+      ]
+    }
+  }
+}

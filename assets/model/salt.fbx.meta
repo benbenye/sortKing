@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "a91e813a-2523-43fa-b093-c7a4ac97a166",
+  "files": [],
+  "subMetas": {
+    "3865f": {
+      "importer": "gltf-mesh",
+      "uuid": "a91e813a-2523-43fa-b093-c7a4ac97a166@3865f",
+      "displayName": "",
+      "id": "3865f",
+      "name": "salt_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7c775": {
+      "importer": "gltf-material",
+      "uuid": "a91e813a-2523-43fa-b093-c7a4ac97a166@7c775",
+      "displayName": "",
+      "id": "7c775",
+      "name": "salt_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b007a": {
+      "importer": "gltf-scene",
+      "uuid": "a91e813a-2523-43fa-b093-c7a4ac97a166@b007a",
+      "displayName": "",
+      "id": "b007a",
+      "name": "salt.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "a91e813a-2523-43fa-b093-c7a4ac97a166@b007a",
+    "assetFinder": {
+      "meshes": [
+        "a91e813a-2523-43fa-b093-c7a4ac97a166@3865f"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "a91e813a-2523-43fa-b093-c7a4ac97a166@7c775"
+      ],
+      "scenes": [
+        "a91e813a-2523-43fa-b093-c7a4ac97a166@b007a"
+      ]
+    }
+  }
+}

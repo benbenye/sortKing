@@ -1,0 +1,61 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "3712a881-3eb1-4498-98b1-d30f56a6eaea",
+  "files": [],
+  "subMetas": {
+    "24a58": {
+      "importer": "gltf-mesh",
+      "uuid": "3712a881-3eb1-4498-98b1-d30f56a6eaea@24a58",
+      "displayName": "",
+      "id": "24a58",
+      "name": "cactus_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cf282": {
+      "importer": "gltf-scene",
+      "uuid": "3712a881-3eb1-4498-98b1-d30f56a6eaea@cf282",
+      "displayName": "",
+      "id": "cf282",
+      "name": "cactus.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "3712a881-3eb1-4498-98b1-d30f56a6eaea@cf282",
+    "assetFinder": {
+      "meshes": [
+        "3712a881-3eb1-4498-98b1-d30f56a6eaea@24a58"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "d58f6e29-b2e3-40f8-ab28-b6b450e031aa"
+      ],
+      "scenes": [
+        "3712a881-3eb1-4498-98b1-d30f56a6eaea@cf282"
+      ]
+    },
+    "dumpMaterials": true,
+    "materialDumpDir": "db://assets/model/cactus/Materials_cactus"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "fb869a18-2c26-4d14-aa8e-77e24fb8c9bb",
+  "files": [],
+  "subMetas": {
+    "be334": {
+      "importer": "gltf-mesh",
+      "uuid": "fb869a18-2c26-4d14-aa8e-77e24fb8c9bb@be334",
+      "displayName": "",
+      "id": "be334",
+      "name": "piano1_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f80d1": {
+      "importer": "gltf-material",
+      "uuid": "fb869a18-2c26-4d14-aa8e-77e24fb8c9bb@f80d1",
+      "displayName": "",
+      "id": "f80d1",
+      "name": "piano1_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "01a3b": {
+      "importer": "gltf-scene",
+      "uuid": "fb869a18-2c26-4d14-aa8e-77e24fb8c9bb@01a3b",
+      "displayName": "",
+      "id": "01a3b",
+      "name": "piano1.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "fb869a18-2c26-4d14-aa8e-77e24fb8c9bb@01a3b",
+    "assetFinder": {
+      "meshes": [
+        "fb869a18-2c26-4d14-aa8e-77e24fb8c9bb@be334"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "fb869a18-2c26-4d14-aa8e-77e24fb8c9bb@f80d1"
+      ],
+      "scenes": [
+        "fb869a18-2c26-4d14-aa8e-77e24fb8c9bb@01a3b"
+      ]
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "f430d893-2233-4fb0-855e-793de981d538",
+  "files": [],
+  "subMetas": {
+    "31094": {
+      "importer": "gltf-material",
+      "uuid": "f430d893-2233-4fb0-855e-793de981d538@31094",
+      "displayName": "",
+      "id": "31094",
+      "name": "Plane_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cba1d": {
+      "importer": "gltf-mesh",
+      "uuid": "f430d893-2233-4fb0-855e-793de981d538@cba1d",
+      "displayName": "",
+      "id": "cba1d",
+      "name": "Plane_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7c8b2": {
+      "importer": "gltf-scene",
+      "uuid": "f430d893-2233-4fb0-855e-793de981d538@7c8b2",
+      "displayName": "",
+      "id": "7c8b2",
+      "name": "Plane.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "f430d893-2233-4fb0-855e-793de981d538@7c8b2",
+    "assetFinder": {
+      "meshes": [
+        "f430d893-2233-4fb0-855e-793de981d538@cba1d"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "f430d893-2233-4fb0-855e-793de981d538@31094"
+      ],
+      "scenes": [
+        "f430d893-2233-4fb0-855e-793de981d538@7c8b2"
+      ]
+    }
+  }
+}

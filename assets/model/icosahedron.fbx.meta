@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "168e4bed-b7eb-40e5-a047-9972c5e630f3",
+  "files": [],
+  "subMetas": {
+    "998c7": {
+      "importer": "gltf-mesh",
+      "uuid": "168e4bed-b7eb-40e5-a047-9972c5e630f3@998c7",
+      "displayName": "",
+      "id": "998c7",
+      "name": "icosahedron_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f5f6d": {
+      "importer": "gltf-material",
+      "uuid": "168e4bed-b7eb-40e5-a047-9972c5e630f3@f5f6d",
+      "displayName": "",
+      "id": "f5f6d",
+      "name": "icosahedron_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "50edb": {
+      "importer": "gltf-scene",
+      "uuid": "168e4bed-b7eb-40e5-a047-9972c5e630f3@50edb",
+      "displayName": "",
+      "id": "50edb",
+      "name": "icosahedron.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "168e4bed-b7eb-40e5-a047-9972c5e630f3@50edb",
+    "assetFinder": {
+      "meshes": [
+        "168e4bed-b7eb-40e5-a047-9972c5e630f3@998c7"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "168e4bed-b7eb-40e5-a047-9972c5e630f3@f5f6d"
+      ],
+      "scenes": [
+        "168e4bed-b7eb-40e5-a047-9972c5e630f3@50edb"
+      ]
+    }
+  }
+}

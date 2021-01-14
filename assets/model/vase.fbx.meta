@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "50c095c7-2dae-4cc1-b145-a1008f11a94a",
+  "files": [],
+  "subMetas": {
+    "38602": {
+      "importer": "gltf-mesh",
+      "uuid": "50c095c7-2dae-4cc1-b145-a1008f11a94a@38602",
+      "displayName": "",
+      "id": "38602",
+      "name": "vase_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "35aa6": {
+      "importer": "gltf-material",
+      "uuid": "50c095c7-2dae-4cc1-b145-a1008f11a94a@35aa6",
+      "displayName": "",
+      "id": "35aa6",
+      "name": "vase_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "83d3b": {
+      "importer": "gltf-scene",
+      "uuid": "50c095c7-2dae-4cc1-b145-a1008f11a94a@83d3b",
+      "displayName": "",
+      "id": "83d3b",
+      "name": "vase.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "50c095c7-2dae-4cc1-b145-a1008f11a94a@83d3b",
+    "assetFinder": {
+      "meshes": [
+        "50c095c7-2dae-4cc1-b145-a1008f11a94a@38602"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "50c095c7-2dae-4cc1-b145-a1008f11a94a@35aa6"
+      ],
+      "scenes": [
+        "50c095c7-2dae-4cc1-b145-a1008f11a94a@83d3b"
+      ]
+    }
+  }
+}

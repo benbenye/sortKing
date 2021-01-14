@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "f39126e4-f224-4ffb-bc3b-c01419847e63",
+  "files": [],
+  "subMetas": {
+    "58c48": {
+      "importer": "gltf-mesh",
+      "uuid": "f39126e4-f224-4ffb-bc3b-c01419847e63@58c48",
+      "displayName": "",
+      "id": "58c48",
+      "name": "dong_ho_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4b204": {
+      "importer": "gltf-material",
+      "uuid": "f39126e4-f224-4ffb-bc3b-c01419847e63@4b204",
+      "displayName": "",
+      "id": "4b204",
+      "name": "dong_ho_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c50c1": {
+      "importer": "gltf-scene",
+      "uuid": "f39126e4-f224-4ffb-bc3b-c01419847e63@c50c1",
+      "displayName": "",
+      "id": "c50c1",
+      "name": "dong_ho.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "f39126e4-f224-4ffb-bc3b-c01419847e63@c50c1",
+    "assetFinder": {
+      "meshes": [
+        "f39126e4-f224-4ffb-bc3b-c01419847e63@58c48"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "f39126e4-f224-4ffb-bc3b-c01419847e63@4b204"
+      ],
+      "scenes": [
+        "f39126e4-f224-4ffb-bc3b-c01419847e63@c50c1"
+      ]
+    }
+  }
+}

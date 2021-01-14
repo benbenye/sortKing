@@ -45,10 +45,10 @@
         "offsetY": 0,
         "trimX": 0,
         "trimY": 0,
-        "width": 42,
-        "height": 37,
-        "rawWidth": 42,
-        "rawHeight": 37,
+        "width": 20,
+        "height": 20,
+        "rawWidth": 20,
+        "rawHeight": 20,
         "borderTop": 0,
         "borderBottom": 0,
         "borderLeft": 0,
@@ -66,7 +66,7 @@
     }
   },
   "userData": {
-    "hasAlpha": false,
+    "hasAlpha": true,
     "type": "sprite-frame",
     "redirect": "652835ae-6785-4494-93fd-0dca7d0465ef@f9941"
   }

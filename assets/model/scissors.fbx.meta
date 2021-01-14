@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "1fa3aa65-8807-47dc-a73c-028176439923",
+  "files": [],
+  "subMetas": {
+    "c896d": {
+      "importer": "gltf-mesh",
+      "uuid": "1fa3aa65-8807-47dc-a73c-028176439923@c896d",
+      "displayName": "",
+      "id": "c896d",
+      "name": "scissors_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "62d11": {
+      "importer": "gltf-material",
+      "uuid": "1fa3aa65-8807-47dc-a73c-028176439923@62d11",
+      "displayName": "",
+      "id": "62d11",
+      "name": "scissors_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5ff07": {
+      "importer": "gltf-scene",
+      "uuid": "1fa3aa65-8807-47dc-a73c-028176439923@5ff07",
+      "displayName": "",
+      "id": "5ff07",
+      "name": "scissors.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "1fa3aa65-8807-47dc-a73c-028176439923@5ff07",
+    "assetFinder": {
+      "meshes": [
+        "1fa3aa65-8807-47dc-a73c-028176439923@c896d"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "1fa3aa65-8807-47dc-a73c-028176439923@62d11"
+      ],
+      "scenes": [
+        "1fa3aa65-8807-47dc-a73c-028176439923@5ff07"
+      ]
+    }
+  }
+}

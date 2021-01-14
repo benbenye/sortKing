@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "8fe2d8c1-faef-4f53-8762-5a329ec74608",
+  "files": [],
+  "subMetas": {
+    "23279": {
+      "importer": "gltf-mesh",
+      "uuid": "8fe2d8c1-faef-4f53-8762-5a329ec74608@23279",
+      "displayName": "",
+      "id": "23279",
+      "name": "turner1_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "65a68": {
+      "importer": "gltf-material",
+      "uuid": "8fe2d8c1-faef-4f53-8762-5a329ec74608@65a68",
+      "displayName": "",
+      "id": "65a68",
+      "name": "turner1_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "df2b0": {
+      "importer": "gltf-scene",
+      "uuid": "8fe2d8c1-faef-4f53-8762-5a329ec74608@df2b0",
+      "displayName": "",
+      "id": "df2b0",
+      "name": "turner1.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "8fe2d8c1-faef-4f53-8762-5a329ec74608@df2b0",
+    "assetFinder": {
+      "meshes": [
+        "8fe2d8c1-faef-4f53-8762-5a329ec74608@23279"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "8fe2d8c1-faef-4f53-8762-5a329ec74608@65a68"
+      ],
+      "scenes": [
+        "8fe2d8c1-faef-4f53-8762-5a329ec74608@df2b0"
+      ]
+    }
+  }
+}

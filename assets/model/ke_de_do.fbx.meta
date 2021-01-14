@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "25de3397-c2ba-4942-8188-306668f222d1",
+  "files": [],
+  "subMetas": {
+    "77b62": {
+      "importer": "gltf-mesh",
+      "uuid": "25de3397-c2ba-4942-8188-306668f222d1@77b62",
+      "displayName": "",
+      "id": "77b62",
+      "name": "ke_de_do_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f70f0": {
+      "importer": "gltf-material",
+      "uuid": "25de3397-c2ba-4942-8188-306668f222d1@f70f0",
+      "displayName": "",
+      "id": "f70f0",
+      "name": "ke_de_do_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0c61b": {
+      "importer": "gltf-scene",
+      "uuid": "25de3397-c2ba-4942-8188-306668f222d1@0c61b",
+      "displayName": "",
+      "id": "0c61b",
+      "name": "ke_de_do.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "25de3397-c2ba-4942-8188-306668f222d1@0c61b",
+    "assetFinder": {
+      "meshes": [
+        "25de3397-c2ba-4942-8188-306668f222d1@77b62"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "25de3397-c2ba-4942-8188-306668f222d1@f70f0"
+      ],
+      "scenes": [
+        "25de3397-c2ba-4942-8188-306668f222d1@0c61b"
+      ]
+    }
+  }
+}

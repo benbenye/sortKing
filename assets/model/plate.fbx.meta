@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "70eddd25-07cf-45c3-bdd9-1b39a4f57e68",
+  "files": [],
+  "subMetas": {
+    "ed547": {
+      "importer": "gltf-mesh",
+      "uuid": "70eddd25-07cf-45c3-bdd9-1b39a4f57e68@ed547",
+      "displayName": "",
+      "id": "ed547",
+      "name": "plate_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3ae7c": {
+      "importer": "gltf-material",
+      "uuid": "70eddd25-07cf-45c3-bdd9-1b39a4f57e68@3ae7c",
+      "displayName": "",
+      "id": "3ae7c",
+      "name": "plate_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a26d2": {
+      "importer": "gltf-scene",
+      "uuid": "70eddd25-07cf-45c3-bdd9-1b39a4f57e68@a26d2",
+      "displayName": "",
+      "id": "a26d2",
+      "name": "plate.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "70eddd25-07cf-45c3-bdd9-1b39a4f57e68@a26d2",
+    "assetFinder": {
+      "meshes": [
+        "70eddd25-07cf-45c3-bdd9-1b39a4f57e68@ed547"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "70eddd25-07cf-45c3-bdd9-1b39a4f57e68@3ae7c"
+      ],
+      "scenes": [
+        "70eddd25-07cf-45c3-bdd9-1b39a4f57e68@a26d2"
+      ]
+    }
+  }
+}

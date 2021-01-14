@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "e85adc03-3f9a-4958-bfa1-a44a036685f4",
+  "files": [],
+  "subMetas": {
+    "b63fb": {
+      "importer": "gltf-mesh",
+      "uuid": "e85adc03-3f9a-4958-bfa1-a44a036685f4@b63fb",
+      "displayName": "",
+      "id": "b63fb",
+      "name": "Sphere_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4987b": {
+      "importer": "gltf-material",
+      "uuid": "e85adc03-3f9a-4958-bfa1-a44a036685f4@4987b",
+      "displayName": "",
+      "id": "4987b",
+      "name": "Sphere_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "07121": {
+      "importer": "gltf-scene",
+      "uuid": "e85adc03-3f9a-4958-bfa1-a44a036685f4@07121",
+      "displayName": "",
+      "id": "07121",
+      "name": "Sphere.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "e85adc03-3f9a-4958-bfa1-a44a036685f4@07121",
+    "assetFinder": {
+      "meshes": [
+        "e85adc03-3f9a-4958-bfa1-a44a036685f4@b63fb"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "e85adc03-3f9a-4958-bfa1-a44a036685f4@4987b"
+      ],
+      "scenes": [
+        "e85adc03-3f9a-4958-bfa1-a44a036685f4@07121"
+      ]
+    }
+  }
+}

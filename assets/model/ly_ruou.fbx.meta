@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "a7705a9a-4d65-4f06-8a18-6e4e2b5fbf94",
+  "files": [],
+  "subMetas": {
+    "4fe94": {
+      "importer": "gltf-mesh",
+      "uuid": "a7705a9a-4d65-4f06-8a18-6e4e2b5fbf94@4fe94",
+      "displayName": "",
+      "id": "4fe94",
+      "name": "ly_ruou_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "bc1ef": {
+      "importer": "gltf-material",
+      "uuid": "a7705a9a-4d65-4f06-8a18-6e4e2b5fbf94@bc1ef",
+      "displayName": "",
+      "id": "bc1ef",
+      "name": "ly_ruou_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7f05d": {
+      "importer": "gltf-scene",
+      "uuid": "a7705a9a-4d65-4f06-8a18-6e4e2b5fbf94@7f05d",
+      "displayName": "",
+      "id": "7f05d",
+      "name": "ly_ruou.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "a7705a9a-4d65-4f06-8a18-6e4e2b5fbf94@7f05d",
+    "assetFinder": {
+      "meshes": [
+        "a7705a9a-4d65-4f06-8a18-6e4e2b5fbf94@4fe94"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "a7705a9a-4d65-4f06-8a18-6e4e2b5fbf94@bc1ef"
+      ],
+      "scenes": [
+        "a7705a9a-4d65-4f06-8a18-6e4e2b5fbf94@7f05d"
+      ]
+    }
+  }
+}

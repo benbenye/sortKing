@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "a3094f1f-aec1-456d-a60d-b9af1d7040ff",
+  "files": [],
+  "subMetas": {
+    "0bcf2": {
+      "importer": "gltf-mesh",
+      "uuid": "a3094f1f-aec1-456d-a60d-b9af1d7040ff@0bcf2",
+      "displayName": "",
+      "id": "0bcf2",
+      "name": "do_dung_hoaqua_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "60f35": {
+      "importer": "gltf-material",
+      "uuid": "a3094f1f-aec1-456d-a60d-b9af1d7040ff@60f35",
+      "displayName": "",
+      "id": "60f35",
+      "name": "do_dung_hoaqua_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "34b61": {
+      "importer": "gltf-scene",
+      "uuid": "a3094f1f-aec1-456d-a60d-b9af1d7040ff@34b61",
+      "displayName": "",
+      "id": "34b61",
+      "name": "do_dung_hoaqua.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "a3094f1f-aec1-456d-a60d-b9af1d7040ff@34b61",
+    "assetFinder": {
+      "meshes": [
+        "a3094f1f-aec1-456d-a60d-b9af1d7040ff@0bcf2"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "a3094f1f-aec1-456d-a60d-b9af1d7040ff@60f35"
+      ],
+      "scenes": [
+        "a3094f1f-aec1-456d-a60d-b9af1d7040ff@34b61"
+      ]
+    }
+  }
+}

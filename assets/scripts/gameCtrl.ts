@@ -28,7 +28,7 @@ export class GameCtrl extends Component {
     private mapManager = null;
     private pairModel = null;
     
-    start () {
+    onLoad () {
         this.mapManager = find('mapManager');
         this.touchState = Constants.TouchState.IDLE;
         MapManager.showMap(`map-${this._runTimeData.level}`, (mapComp) => {
@@ -39,6 +39,7 @@ export class GameCtrl extends Component {
             this.SecondaryPlane.active = false;
             this.mapComp = mapComp;
             console.log(mapComp)
+            this._runTimeData.mapInfo = this.mapComp;
             this.gameStart();
         });
         systemEvent.on(SystemEvent.EventType.TOUCH_START, this.onTouchStart, this);
@@ -142,7 +143,8 @@ export class GameCtrl extends Component {
     private disObjectHandler() {
         console.log(this.targetModel.name, this.mapComp.goals)
         console.log(this.mapComp.goals.indexOf(this.targetModel.name) !== -1)
-        if (this.mapComp.goals.indexOf(this.targetModel.name) !== -1) {
+
+        if (this.mapComp.goals.find((goal) => {return goal.match(this.targetModel.name.split('-')[0])}) !== -1) {
             tween(this.targetModel).to(0.3, {
                 worldPosition: new Vec3(0, 1, 8.225),
                 eulerAngles: new Vec3(0, 0, 0)
@@ -319,6 +321,7 @@ export class GameCtrl extends Component {
             this.SecondaryPlane.active = false;
             this.mapComp = mapComp;
             console.log(mapComp)
+            this._runTimeData.mapInfo = this.mapComp;
             this.gameStart();
         });
     }

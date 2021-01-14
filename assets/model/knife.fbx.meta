@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "224631d9-9340-4193-816f-339179a24d34",
+  "files": [],
+  "subMetas": {
+    "f8c22": {
+      "importer": "gltf-mesh",
+      "uuid": "224631d9-9340-4193-816f-339179a24d34@f8c22",
+      "displayName": "",
+      "id": "f8c22",
+      "name": "knife_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5032a": {
+      "importer": "gltf-material",
+      "uuid": "224631d9-9340-4193-816f-339179a24d34@5032a",
+      "displayName": "",
+      "id": "5032a",
+      "name": "knife_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fa70f": {
+      "importer": "gltf-scene",
+      "uuid": "224631d9-9340-4193-816f-339179a24d34@fa70f",
+      "displayName": "",
+      "id": "fa70f",
+      "name": "knife.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "224631d9-9340-4193-816f-339179a24d34@fa70f",
+    "assetFinder": {
+      "meshes": [
+        "224631d9-9340-4193-816f-339179a24d34@f8c22"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "224631d9-9340-4193-816f-339179a24d34@5032a"
+      ],
+      "scenes": [
+        "224631d9-9340-4193-816f-339179a24d34@fa70f"
+      ]
+    }
+  }
+}

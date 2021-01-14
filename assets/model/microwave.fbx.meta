@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "e26565b6-9ded-4b7c-96f2-af8ec79ba1a4",
+  "files": [],
+  "subMetas": {
+    "40e41": {
+      "importer": "gltf-mesh",
+      "uuid": "e26565b6-9ded-4b7c-96f2-af8ec79ba1a4@40e41",
+      "displayName": "",
+      "id": "40e41",
+      "name": "microwave_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "be0f6": {
+      "importer": "gltf-material",
+      "uuid": "e26565b6-9ded-4b7c-96f2-af8ec79ba1a4@be0f6",
+      "displayName": "",
+      "id": "be0f6",
+      "name": "microwave_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5ff67": {
+      "importer": "gltf-scene",
+      "uuid": "e26565b6-9ded-4b7c-96f2-af8ec79ba1a4@5ff67",
+      "displayName": "",
+      "id": "5ff67",
+      "name": "microwave.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "e26565b6-9ded-4b7c-96f2-af8ec79ba1a4@5ff67",
+    "assetFinder": {
+      "meshes": [
+        "e26565b6-9ded-4b7c-96f2-af8ec79ba1a4@40e41"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "e26565b6-9ded-4b7c-96f2-af8ec79ba1a4@be0f6"
+      ],
+      "scenes": [
+        "e26565b6-9ded-4b7c-96f2-af8ec79ba1a4@5ff67"
+      ]
+    }
+  }
+}

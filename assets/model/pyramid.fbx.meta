@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "d1ba86ed-9a30-44a2-93a7-4655018fcee7",
+  "files": [],
+  "subMetas": {
+    "1e040": {
+      "importer": "gltf-mesh",
+      "uuid": "d1ba86ed-9a30-44a2-93a7-4655018fcee7@1e040",
+      "displayName": "",
+      "id": "1e040",
+      "name": "pyramid_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1e767": {
+      "importer": "gltf-material",
+      "uuid": "d1ba86ed-9a30-44a2-93a7-4655018fcee7@1e767",
+      "displayName": "",
+      "id": "1e767",
+      "name": "pyramid_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "46e99": {
+      "importer": "gltf-scene",
+      "uuid": "d1ba86ed-9a30-44a2-93a7-4655018fcee7@46e99",
+      "displayName": "",
+      "id": "46e99",
+      "name": "pyramid.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "d1ba86ed-9a30-44a2-93a7-4655018fcee7@46e99",
+    "assetFinder": {
+      "meshes": [
+        "d1ba86ed-9a30-44a2-93a7-4655018fcee7@1e040"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "d1ba86ed-9a30-44a2-93a7-4655018fcee7@1e767"
+      ],
+      "scenes": [
+        "d1ba86ed-9a30-44a2-93a7-4655018fcee7@46e99"
+      ]
+    }
+  }
+}

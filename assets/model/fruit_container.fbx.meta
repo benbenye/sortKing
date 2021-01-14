@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "299a67a5-7906-418c-87f7-85a136d9aa73",
+  "files": [],
+  "subMetas": {
+    "76c95": {
+      "importer": "gltf-mesh",
+      "uuid": "299a67a5-7906-418c-87f7-85a136d9aa73@76c95",
+      "displayName": "",
+      "id": "76c95",
+      "name": "fruit_container_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "392eb": {
+      "importer": "gltf-material",
+      "uuid": "299a67a5-7906-418c-87f7-85a136d9aa73@392eb",
+      "displayName": "",
+      "id": "392eb",
+      "name": "fruit_container_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2137a": {
+      "importer": "gltf-scene",
+      "uuid": "299a67a5-7906-418c-87f7-85a136d9aa73@2137a",
+      "displayName": "",
+      "id": "2137a",
+      "name": "fruit_container.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "299a67a5-7906-418c-87f7-85a136d9aa73@2137a",
+    "assetFinder": {
+      "meshes": [
+        "299a67a5-7906-418c-87f7-85a136d9aa73@76c95"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "299a67a5-7906-418c-87f7-85a136d9aa73@392eb"
+      ],
+      "scenes": [
+        "299a67a5-7906-418c-87f7-85a136d9aa73@2137a"
+      ]
+    }
+  }
+}

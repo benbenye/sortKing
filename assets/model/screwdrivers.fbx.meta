@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "9ed7af10-2046-4bfc-bc72-d18666bd953a",
+  "files": [],
+  "subMetas": {
+    "79a3f": {
+      "importer": "gltf-mesh",
+      "uuid": "9ed7af10-2046-4bfc-bc72-d18666bd953a@79a3f",
+      "displayName": "",
+      "id": "79a3f",
+      "name": "screwdrivers_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "19b23": {
+      "importer": "gltf-material",
+      "uuid": "9ed7af10-2046-4bfc-bc72-d18666bd953a@19b23",
+      "displayName": "",
+      "id": "19b23",
+      "name": "screwdrivers_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3caa3": {
+      "importer": "gltf-scene",
+      "uuid": "9ed7af10-2046-4bfc-bc72-d18666bd953a@3caa3",
+      "displayName": "",
+      "id": "3caa3",
+      "name": "screwdrivers.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "9ed7af10-2046-4bfc-bc72-d18666bd953a@3caa3",
+    "assetFinder": {
+      "meshes": [
+        "9ed7af10-2046-4bfc-bc72-d18666bd953a@79a3f"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "9ed7af10-2046-4bfc-bc72-d18666bd953a@19b23"
+      ],
+      "scenes": [
+        "9ed7af10-2046-4bfc-bc72-d18666bd953a@3caa3"
+      ]
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "e31befe9-b939-4887-8c2c-107d160ab3d5",
+  "files": [],
+  "subMetas": {
+    "7feda": {
+      "importer": "gltf-mesh",
+      "uuid": "e31befe9-b939-4887-8c2c-107d160ab3d5@7feda",
+      "displayName": "",
+      "id": "7feda",
+      "name": "wheel3_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2ba37": {
+      "importer": "gltf-material",
+      "uuid": "e31befe9-b939-4887-8c2c-107d160ab3d5@2ba37",
+      "displayName": "",
+      "id": "2ba37",
+      "name": "wheel3_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "117c5": {
+      "importer": "gltf-scene",
+      "uuid": "e31befe9-b939-4887-8c2c-107d160ab3d5@117c5",
+      "displayName": "",
+      "id": "117c5",
+      "name": "wheel3.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "e31befe9-b939-4887-8c2c-107d160ab3d5@117c5",
+    "assetFinder": {
+      "meshes": [
+        "e31befe9-b939-4887-8c2c-107d160ab3d5@7feda"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "e31befe9-b939-4887-8c2c-107d160ab3d5@2ba37"
+      ],
+      "scenes": [
+        "e31befe9-b939-4887-8c2c-107d160ab3d5@117c5"
+      ]
+    }
+  }
+}

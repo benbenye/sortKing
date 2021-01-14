@@ -1,0 +1,75 @@
+{
+  "ver": "1.3.24",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "fc0734ee-8e9c-4dfa-a4a3-01011f80292f",
+  "files": [],
+  "subMetas": {
+    "0f229": {
+      "importer": "gltf-mesh",
+      "uuid": "fc0734ee-8e9c-4dfa-a4a3-01011f80292f@0f229",
+      "displayName": "",
+      "id": "0f229",
+      "name": "steering_wheel_0.mesh",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.1.0",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "865eb": {
+      "importer": "gltf-material",
+      "uuid": "fc0734ee-8e9c-4dfa-a4a3-01011f80292f@865eb",
+      "displayName": "",
+      "id": "865eb",
+      "name": "steering_wheel_0Mat.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f3195": {
+      "importer": "gltf-scene",
+      "uuid": "fc0734ee-8e9c-4dfa-a4a3-01011f80292f@f3195",
+      "displayName": "",
+      "id": "f3195",
+      "name": "steering_wheel.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.11",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "redirect": "fc0734ee-8e9c-4dfa-a4a3-01011f80292f@f3195",
+    "assetFinder": {
+      "meshes": [
+        "fc0734ee-8e9c-4dfa-a4a3-01011f80292f@0f229"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "fc0734ee-8e9c-4dfa-a4a3-01011f80292f@865eb"
+      ],
+      "scenes": [
+        "fc0734ee-8e9c-4dfa-a4a3-01011f80292f@f3195"
+      ]
+    }
+  }
+}
