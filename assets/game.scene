@@ -165,11 +165,11 @@
     "_enabled": true,
     "_projection": 1,
     "_priority": 0,
-    "_fov": 55,
+    "_fov": 63.499,
     "_fovAxis": 0,
     "_orthoHeight": 10,
     "_near": 10,
-    "_far": 27,
+    "_far": 26.991,
     "_color": {
       "__type__": "cc.Color",
       "r": 51,

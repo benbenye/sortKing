@@ -144,7 +144,7 @@ export class GameCtrl extends Component {
         console.log(this.targetModel.name, this.mapComp.goals)
         console.log(this.mapComp.goals.indexOf(this.targetModel.name) !== -1)
 
-        if (this.mapComp.goals.find((goal) => {return goal.match(this.targetModel.name.split('-')[0])}) !== -1) {
+        if (this.mapComp.goals.find((goal) => {return goal.match(this.targetModel.name.split('-')[0])})) {
             tween(this.targetModel).to(0.3, {
                 worldPosition: new Vec3(0, 1, 8.225),
                 eulerAngles: new Vec3(0, 0, 0)
